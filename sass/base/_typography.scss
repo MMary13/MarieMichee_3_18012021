@@ -1,0 +1,15 @@
+body {
+    font-family: $text-font, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+    color: $color-text;
+}
+
+h1, h2, h3 {
+    font-family: $title-font, sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+

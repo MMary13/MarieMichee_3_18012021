@@ -1,0 +1,20 @@
+.footer {
+    background-color: $color-background-dark;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px 20px 20px;
+    &__logo {
+        width: 200px;
+        margin-bottom: 15px;
+        filter: invert(100%);
+    }
+    &__link {
+        text-decoration: none;
+        color: #FFFFFF;
+        margin-bottom: 10px;
+        span {
+            width: 18px;
+            padding-right: 5px;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+button {
+    font-size: 18px;
+    font-weight: 200;
+    color: #FFFFFF;
+    padding: 20px;
+    border: none;
+    border-radius: 35px;
+    box-shadow: 4px 4px 4px $color-background-input;
+    background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
+}

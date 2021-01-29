@@ -2,6 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="shortcut icon" type="image/png" href="images/logo/favicon.png">
     <script src="https://kit.fontawesome.com/ae53c87fa4.js" crossorigin="anonymous"></script>
@@ -9,9 +10,11 @@
   </head>
 
   <body>
-    <header>
-      <a href="index.html"><i class="fas fa-arrow-left"></i></a>
-      <img src="images/logo/ohmyfood@2x.svg" alt="Ohmyfood">
+    <header class="header">
+      <a href="index.html" class="header__retour"><span class="fas fa-arrow-left"></span></a>
+      <div class="header__logo">
+        <img src="images/logo/ohmyfood@2x.svg" alt="Ohmyfood">
+      </div>
     </header>
 
     <div>
@@ -20,7 +23,7 @@
 
     <section>
       <h2>La palette du goût</h2>
-      <i class="far fa-heart"></i>
+      <span class="far fa-heart"></span>
 
       <div class="menu">
         <div>
@@ -28,19 +31,19 @@
           <div class="menu__plat">
             <p><span>Fricassée d'escargot</span><br>Au piment d'Espelette </p>
             <p>25€</p>
-            <i class="far fa-check-circle"></i>
+            <span class="far fa-check-circle"></span>
           </div>
 
           <div class="menu__plat">
             <p><span>Foie gras de canard mi-cuit</span><br>Et ses copeaux de truffe noire</p>
             <p>35€</p>
-            <i class="far fa-check-circle"></i>
+            <span class="far fa-check-circle"></span>
           </div>
 
           <div class="menu__plat">
             <p><span>Oeuf au plat</span><br>Assaisonné à la truffe sur lit de caviar</p>
             <p>20€</p>
-            <i class="far fa-check-circle"></i>
+            <span class="far fa-check-circle"></span>
           </div>
         </div>
 
@@ -49,19 +52,19 @@
           <div class="menu__plat">
             <p><span>Filet de boeuf aux herbes</span><br>Accompagné de sa ribambelle de légumes</p>
             <p>40€</p>
-            <i class="far fa-check-circle"></i>
+            <span class="far fa-check-circle"></span>
           </div>
 
           <div class="menu__plat">
             <p><span>Parmentier de queue de boeuf</span><br>À la truffe noire sur sa purée de panais</p>
             <p>35€</p>
-            <i class="far fa-check-circle"></i>
+            <span class="far fa-check-circle"></span>
           </div>
 
           <div class="menu__plat">
             <p><span>Filet de turbot</span><br>Aux agrumes</p>
             <p>44€</p>
-            <i class="far fa-check-circle"></i>
+            <span class="far fa-check-circle"></span>
           </div>
         </div>
 
@@ -70,19 +73,19 @@
           <div class="menu__plat">
             <p><span>Paris-Brest</span><br>Revisité</p>
             <p>18€</p>
-            <i class="far fa-check-circle"></i>
+            <span class="far fa-check-circle"></span>
           </div>
 
           <div class="menu__plat">
             <p><span>Macaron au chocolat d'exception</span><br>Et glace à la vanille de Madagascar</p>
             <p>22€</p>
-            <i class="far fa-check-circle"></i>
+            <span class="far fa-check-circle"></span>
           </div>
 
           <div class="menu__plat">
             <p><span>Mousse au chocolat</span><br>Au piment d'Espelette et à la truffe noire</p>
             <p>23€</p>
-            <i class="far fa-check-circle"></i>
+            <span class="far fa-check-circle"></span>
           </div>
         </div>
       </div>
@@ -92,12 +95,12 @@
 
 
 
-    <footer>
-      <img src="images/logo/ohmyfood@2x.svg" alt="Ohmyfood">
-      <p><i class="fas fa-utensils"></i> <a href="#">Proposer un restaurant</a></p>
-      <p><i class="fas fa-hands-helping"></i> <a href="#">Devenir partenaire</a></p>
-      <p><a href="#">Mentions légales</a></p>
-      <p><a href="#">Contact</a></p>
+    <footer class="footer">
+      <img src="images/logo/ohmyfood@2x.svg" alt="Ohmyfood" class="footer__logo">
+      <a href="#" class="footer__link"><span class="fas fa-utensils"></span> Proposer un restaurant</a>
+      <a href="#" class="footer__link"><span class="fas fa-hands-helping"></span> Devenir partenaire</a>
+      <a href="#" class="footer__link">Mentions légales</a>
+      <a href="#" class="footer__link">Contact</a>
     </footer>
   </body>
 </html>

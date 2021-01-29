@@ -2,6 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="shortcut icon" type="image/png" href="images/logo/favicon.png">
     <script src="https://kit.fontawesome.com/ae53c87fa4.js" crossorigin="anonymous"></script>
@@ -9,9 +10,11 @@
   </head>
 
   <body>
-    <header>
-      <a href="index.html"><i class="fas fa-arrow-left"></i></a>
-      <img src="images/logo/ohmyfood@2x.svg" alt="Ohmyfood">
+    <header class="header">
+      <a href="index.html" class="header__retour"><span class="fas fa-arrow-left"></span></a>
+      <div class="header__logo">
+        <img src="images/logo/ohmyfood@2x.svg" alt="Ohmyfood">
+      </div>
     </header>
 
     <div>
@@ -20,7 +23,7 @@
 
     <section>
       <h2>Lanote enchantée</h2>
-      <i class="far fa-heart"></i>
+      <span class="far fa-heart"></span>
 
       <div class="menu">
         <div>
@@ -28,25 +31,25 @@
           <div class="menu__plat">
             <p><span>Ravioles de foie gras</span><br>Accompagnés de leur crème à la truffe</p>
             <p>25€</p>
-            <i class="far fa-check-circle"></i>
+            <span class="far fa-check-circle"></span>
           </div>
 
           <div class="menu__plat">
             <p><span>Caviar osciètre</span><br>Sur blini à la farine de blé noir</p>
             <p>35€</p>
-            <i class="far fa-check-circle"></i>
+            <span class="far fa-check-circle"></span>
           </div>
 
           <div class="menu__plat">
             <p><span>Homard et espuma de potiron</span><br>Mariné aux zestes d'orange</p>
             <p>20€</p>
-            <i class="far fa-check-circle"></i>
+            <span class="far fa-check-circle"></span>
           </div>
 
           <div class="menu__plat">
             <p><span>Foie gras de canard cuit entier</span><br>Confiture de figue et pain toasté</p>
             <p>35€</p>
-            <i class="far fa-check-circle"></i>
+            <span class="far fa-check-circle"></span>
           </div>
         </div>
 
@@ -55,19 +58,19 @@
           <div class="menu__plat">
             <p><span>Noix de coquilles Saint-Jacques</span><br>Sur lit de purée de céleri-rave</p>
             <p>40€</p>
-            <i class="far fa-check-circle"></i>
+            <span class="far fa-check-circle"></span>
           </div>
 
           <div class="menu__plat">
             <p><span>Langoustine poêlée</span><br>Purée de patate douce</p>
             <p>35€</p>
-            <i class="far fa-check-circle"></i>
+            <span class="far fa-check-circle"></span>
           </div>
 
           <div class="menu__plat">
             <p><span>Mijoté de queue de boeuf</span><br>Et riz sauvage aux zestes de citron</p>
             <p>44€</p>
-            <i class="far fa-check-circle"></i>
+            <span class="far fa-check-circle"></span>
           </div>
         </div>
 
@@ -76,19 +79,19 @@
           <div class="menu__plat">
             <p><span>Macaron noisette et chocolat</span><br>Glace au caramel brun et sel de Guérande</p>
             <p>18€</p>
-            <i class="far fa-check-circle"></i>
+            <span class="far fa-check-circle"></span>
           </div>
 
           <div class="menu__plat">
             <p><span>Baba au rhum revisité</span><br>Avec son coulis de citron</p>
             <p>22€</p>
-            <i class="far fa-check-circle"></i>
+            <span class="far fa-check-circle"></span>
           </div>
 
           <div class="menu__plat">
             <p><span>Tarte au citron meringuée</span><br>Déstructurée</p>
             <p>23€</p>
-            <i class="far fa-check-circle"></i>
+            <span class="far fa-check-circle"></span>
           </div>
         </div>
       </div>
@@ -97,12 +100,12 @@
 
 
 
-    <footer>
-      <img src="images/logo/ohmyfood@2x.svg" alt="Ohmyfood">
-      <p><i class="fas fa-utensils"></i> <a href="#">Proposer un restaurant</a></p>
-      <p><i class="fas fa-hands-helping"></i> <a href="#">Devenir partenaire</a></p>
-      <p><a href="#">Mentions légales</a></p>
-      <p><a href="#">Contact</a></p>
+    <footer class="footer">
+      <img src="images/logo/ohmyfood@2x.svg" alt="Ohmyfood" class="footer__logo">
+      <a href="#" class="footer__link"><span class="fas fa-utensils"></span> Proposer un restaurant</a>
+      <a href="#" class="footer__link"><span class="fas fa-hands-helping"></span> Devenir partenaire</a>
+      <a href="#" class="footer__link">Mentions légales</a>
+      <a href="#" class="footer__link">Contact</a>
     </footer>
   </body>
 </html>

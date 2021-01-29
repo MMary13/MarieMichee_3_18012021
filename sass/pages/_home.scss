@@ -1,0 +1,79 @@
+.intro {
+    margin-bottom: 50px;
+    &__localisation {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        padding: 10px 0px 10px 0px;
+        background-color: $color-background-input;
+        input {
+            width: 150px;
+            border: none;
+            background-color: $color-background-input;
+            padding-left: 20px;
+            font-size: 18px;
+        }
+        span {
+            font-size: 30px;
+            padding: 1px;
+            justify-content: center;
+        }
+        
+    }
+    &__presentation {
+        background-color: $color-background-light;
+        text-align: center;
+        padding: 35px 20px 35px 20px;
+        h1 {
+            margin-bottom: 20px;
+        }
+        p {
+            color: $color-text-light;
+            margin-bottom: 30px;
+        }
+    }
+    
+}
+.fonctionnement {
+    padding: 0 15px 0 15px;
+    margin-bottom: 50px;
+    &__step {
+        display: flex;
+        align-items: center;
+        height: 60px;
+        border-radius: 25px;
+        box-shadow: 4px 4px 4px $color-background-input;
+        margin: 20px 0 20px 0;
+        padding: 5px 0px 5px 0px;
+        background-color: $color-background-light;
+    }
+}
+.step__number {
+    color: #FFFFFF;
+    border-radius: 75px;
+    padding: 2px 9px 2px 9px;
+    background-color: $color-primary;
+    position: relative;
+    left: -5px;
+}
+
+.step__icon {
+    width: 15px;
+    padding: 0 20px 0 20px;
+    color: $color-background-dark;
+}
+.restaurants {
+    background-color: $color-background-light;
+    padding: 20px;
+}
+.resto-card {
+    margin: auto;
+    margin-top: 20px;
+    &__image {
+            border-radius: 15px 15px 0px 0px;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        
+    }
+}
