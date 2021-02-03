@@ -1,0 +1,72 @@
+.menu-image--container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: auto;
+    }
+    .image-portrait {
+        position: relative;
+        top: -115px;
+    }
+}
+
+.menu-section {
+    padding: 40px 15px 30px 15px;
+    background-color: $color-background-light;
+    border-radius: 50px 50px 0px 0px;
+    position: relative;
+    top: -50px;
+    & > h2 {
+        padding-right: 10px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+}
+
+.menu {
+    & .sous-menu {
+        margin: 40px 0px 40px 0px;
+    }
+    h3 {
+        font-size: 18px;
+        font-weight: 300;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        span {
+            width: 50px;
+            height: 3px;
+            background-color: $color-tertiary;
+            margin-top: 5px;
+        }
+    }
+    &__plat {
+        display: flex;
+        justify-content: space-between;
+        justify-items: flex-end;
+        margin-bottom: 15px;
+        background-color: #FFFFFF;
+        padding: 8px;
+        border-radius: 15px;
+        box-shadow: 4px 4px 6px darken($color-background-input,5%);
+        &--text {
+            font-size: 14px;
+            width: 80%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            span {
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+        &--prix {
+            font-size: 16px;
+        }
+    }
+}
+

@@ -1,8 +1,10 @@
 .footer {
     background-color: $color-background-dark;
-    display: flex;
-    flex-direction: column;
-    padding: 20px 0px 20px 20px;
+    padding: 20px 20px 20px 20px;
+    div {
+        display: flex;
+        flex-direction: column;
+    }
     &__logo {
         width: 200px;
         margin-bottom: 15px;
@@ -15,6 +17,33 @@
         span {
             width: 18px;
             padding-right: 5px;
+        }
+    }
+}
+
+@media only screen and (min-width:768px)  and (max-width:991px) {
+    .footer {
+        padding: 30px;
+        & > div {
+            margin-top: 25px;
+            width: 80%;
+            margin: auto;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media only screen and (min-width:991px) {
+    .footer {
+        padding: 30px;
+        & > div {
+            margin-top: 25px;
+            width: 60%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
     }
 }

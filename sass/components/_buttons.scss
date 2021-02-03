@@ -5,6 +5,6 @@ button {
     padding: 20px;
     border: none;
     border-radius: 35px;
-    box-shadow: 4px 4px 4px $color-background-input;
+    box-shadow: 4px 4px 6px darken($color-background-input,5%);
     background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
 }

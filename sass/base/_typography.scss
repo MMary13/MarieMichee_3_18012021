@@ -1,3 +1,4 @@
+
 body {
     font-family: $text-font, sans-serif;
     font-size: 19px;
@@ -6,10 +7,15 @@ body {
     color: $color-text;
 }
 
-h1, h2, h3 {
-    font-family: $title-font, sans-serif;
+h1, h3 {
+    font-family: $text-font, sans-serif;
     font-size: 27px;
     font-weight: 700;
 }
 
+h2 {
+    font-family: $title-font, sans-serif;
+    font-size: 27px;
+    font-weight: 500;
+}
 

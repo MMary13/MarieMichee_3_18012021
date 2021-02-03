@@ -1,9 +1,14 @@
+@font-face {
+  font-family: "shrikhandregular";
+  src: url("../fonts/Shrikhand-Regular.otf") format("truetype"), url("../fonts/shrikhand-regular-webfont.woff2") format("woff2"), url("../fonts/shrikhand-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
 }
 
 body {
@@ -14,10 +19,16 @@ body {
   color: #181818;
 }
 
-h1, h2, h3 {
-  font-family: "Shrikhand", sans-serif;
+h1, h3 {
+  font-family: "Roboto", sans-serif;
   font-size: 27px;
   font-weight: 700;
+}
+
+h2 {
+  font-family: "shrikhandregular", sans-serif;
+  font-size: 27px;
+  font-weight: 500;
 }
 
 button {
@@ -27,7 +38,7 @@ button {
   padding: 20px;
   border: none;
   border-radius: 35px;
-  box-shadow: 4px 4px 4px #EAEAEA;
+  box-shadow: 4px 4px 6px #dddddd;
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
 }
 
@@ -58,9 +69,11 @@ button {
 
 .footer {
   background-color: #353535;
+  padding: 20px 20px 20px 20px;
+}
+.footer div {
   display: flex;
   flex-direction: column;
-  padding: 20px 0px 20px 20px;
 }
 .footer__logo {
   width: 200px;
@@ -77,6 +90,31 @@ button {
   padding-right: 5px;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .footer {
+    padding: 30px;
+  }
+  .footer > div {
+    margin-top: 25px;
+    width: 80%;
+    margin: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 991px) {
+  .footer {
+    padding: 30px;
+  }
+  .footer > div {
+    margin-top: 25px;
+    width: 60%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
 .intro {
   margin-bottom: 50px;
 }
@@ -113,7 +151,7 @@ button {
 }
 
 .fonctionnement {
-  padding: 0 15px 0 15px;
+  padding: 0 20px 0 20px;
   margin-bottom: 50px;
 }
 .fonctionnement__step {
@@ -121,7 +159,7 @@ button {
   align-items: center;
   height: 60px;
   border-radius: 25px;
-  box-shadow: 4px 4px 4px #EAEAEA;
+  box-shadow: 4px 4px 6px #dddddd;
   margin: 20px 0 20px 0;
   padding: 5px 10px 5px 0px;
   background-color: #F6F6F6;
@@ -144,21 +182,24 @@ button {
 
 .restaurants {
   background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .restaurants > h3 {
-  padding: 30px 5% 30px 0px;
+  padding: 30px 5% 30px 5%;
 }
 .restaurants > div {
   margin: auto;
-  max-width: 450px;
   padding: 0px 5% 30px 5%;
 }
 
 .resto-card {
+  max-width: 450px;
   margin: 35px 0px 25px 0px;
   background-color: #FFFFFF;
   border-radius: 15px 15px 15px 15px;
-  box-shadow: 4px 4px 4px #EAEAEA;
+  box-shadow: 4px 4px 6px #dddddd;
 }
 .resto-card a {
   text-decoration: none;
@@ -204,12 +245,14 @@ button {
 }
 
 @media only screen and (min-width: 991px) {
-  .fonctionnement > h2 {
-    padding-left: 5%;
+  .fonctionnement {
+    padding: 0px;
+  }
+  .fonctionnement > h3 {
+    padding-left: 6%;
   }
   .fonctionnement > div {
-    width: 90%;
-    margin: auto;
+    padding: 0 5% 0 5%;
     display: flex;
     justify-content: space-between;
   }
@@ -218,34 +261,109 @@ button {
     padding-left: 6%;
   }
   .restaurants > div {
-    max-width: 80%;
+    width: 75%;
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    padding: 10px 0px 30px 0px;
   }
-
-  .resto-card {
-    width: 345px;
+  .restaurants__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .restaurants .resto-card {
+    max-width: 400px;
+    min-width: 300px;
   }
 }
-@media only screen and (min-width: 769px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  .fonctionnement {
+    padding: 0 30px 0 30px;
+  }
   .fonctionnement > div {
     margin: auto;
     width: 70%;
   }
 
   .restaurants > div {
-    max-width: 100%;
-    margin: auto;
+    margin: 0px;
+    padding: 10 30px 30px 30px;
+  }
+  .restaurants__row {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
   }
-
-  .resto-card {
-    width: 345px;
+  .restaurants .resto-card {
+    max-width: 345px;
   }
+}
+.menu-image--container {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+.menu-image--container img {
+  width: 100%;
+  height: auto;
+}
+.menu-image--container .image-portrait {
+  position: relative;
+  top: -115px;
+}
+
+.menu-section {
+  padding: 40px 15px 30px 15px;
+  background-color: #F6F6F6;
+  border-radius: 50px 50px 0px 0px;
+  position: relative;
+  top: -50px;
+}
+.menu-section > h2 {
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.menu .sous-menu {
+  margin: 40px 0px 40px 0px;
+}
+.menu h3 {
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.menu h3 span {
+  width: 50px;
+  height: 3px;
+  background-color: #99E2D0;
+  margin-top: 5px;
+}
+.menu__plat {
+  display: flex;
+  justify-content: space-between;
+  justify-items: flex-end;
+  margin-bottom: 15px;
+  background-color: #FFFFFF;
+  padding: 8px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 6px #dddddd;
+}
+.menu__plat--text {
+  font-size: 14px;
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu__plat--text span {
+  font-size: 16px;
+  font-weight: 600;
+}
+.menu__plat--prix {
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=style.css.map */

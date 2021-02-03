@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'shrikhandregular';
+    src: url('../fonts/Shrikhand-Regular.otf') format('truetype'),
+         url('../fonts/shrikhand-regular-webfont.woff2') format('woff2'),
+         url('../fonts/shrikhand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @import "./utils/variables";
 @import "./utils/functions";
 @import "./utils/mixins";
@@ -8,7 +17,6 @@
 @import "./components/buttons";
 
 @import "./layout/header";
-@import "./layout/container";
 @import "./layout/footer";
 
 
