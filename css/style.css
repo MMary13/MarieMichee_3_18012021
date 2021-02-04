@@ -21,7 +21,7 @@ body {
 
 h1, h3 {
   font-family: "Roboto", sans-serif;
-  font-size: 27px;
+  font-size: 18px;
   font-weight: 700;
 }
 
@@ -32,9 +32,10 @@ h2 {
 }
 
 button {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 200;
   color: #FFFFFF;
+  min-width: 200px;
   padding: 20px;
   border: none;
   border-radius: 35px;
@@ -50,12 +51,22 @@ button {
   justify-content: center;
 }
 .header__logo {
-  margin: 20px 0px 20px 0px;
+  margin: 15px 0px 10px 0px;
   width: 50%;
 }
 .header__logo img {
   width: 100%;
   height: auto;
+}
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  .header__logo {
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 991px) {
+  .header__logo {
+    width: 25%;
+  }
 }
 .header__retour {
   position: absolute;
@@ -323,12 +334,15 @@ button {
   justify-content: space-between;
   margin-bottom: 20px;
 }
+.menu-section--button {
+  display: flex;
+  justify-content: center;
+}
 
 .menu .sous-menu {
   margin: 40px 0px 40px 0px;
 }
 .menu h3 {
-  font-size: 18px;
   font-weight: 300;
   text-transform: uppercase;
   display: flex;
@@ -343,17 +357,15 @@ button {
 }
 .menu__plat {
   display: flex;
-  justify-content: space-between;
-  justify-items: flex-end;
   margin-bottom: 15px;
   background-color: #FFFFFF;
-  padding: 8px;
   border-radius: 15px;
   box-shadow: 4px 4px 6px #dddddd;
 }
 .menu__plat--text {
   font-size: 14px;
   width: 80%;
+  padding: 8px 0px 8px 8px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -363,7 +375,67 @@ button {
   font-weight: 600;
 }
 .menu__plat--prix {
+  padding: 0px 10px 0px 10px;
   font-size: 16px;
+  font-weight: bold;
+  width: 50px;
+  line-height: 66px;
+  text-align: right;
+}
+.menu__plat--checkbox {
+  line-height: 66px;
+  text-align: center;
+  vertical-align: middle;
+  width: 50px;
+  padding: 0px 10px 0px 10px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  color: #FFFFFF;
+  font-size: 25px;
+  background-color: #99E2D0;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+  .menu-section > h2, .menu-section .menu {
+    width: 85%;
+    margin: auto;
+  }
+  .menu-section > .menu__plat {
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+@media only screen and (min-width: 991px) {
+  .menu-image--container {
+    height: 400px;
+  }
+  .menu-image--container img {
+    position: relative;
+    top: -200px;
+  }
+  .menu-image--container .image-portrait {
+    top: -270px;
+  }
+
+  .menu-section {
+    padding: 40px 5% 30px 5%;
+  }
+  .menu-section h2 {
+    justify-content: flex-start;
+  }
+  .menu-section h2 span {
+    margin: 0px 20px 0px 20px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu .sous-menu {
+    width: 32%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

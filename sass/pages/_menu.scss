@@ -24,6 +24,10 @@
         justify-content: space-between;
         margin-bottom: 20px;
     }
+    &--button {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .menu {
@@ -31,7 +35,6 @@
         margin: 40px 0px 40px 0px;
     }
     h3 {
-        font-size: 18px;
         font-weight: 300;
         text-transform: uppercase;
         display: flex;
@@ -46,16 +49,14 @@
     }
     &__plat {
         display: flex;
-        justify-content: space-between;
-        justify-items: flex-end;
         margin-bottom: 15px;
         background-color: #FFFFFF;
-        padding: 8px;
         border-radius: 15px;
         box-shadow: 4px 4px 6px darken($color-background-input,5%);
         &--text {
             font-size: 14px;
             width: 80%;
+            padding: 8px 0px 8px 8px;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -65,8 +66,75 @@
             }
         }
         &--prix {
+            padding: 0px 10px 0px 10px;
             font-size: 16px;
+            font-weight: bold;
+            width: 50px;
+            line-height: 66px;
+            text-align: right;
+            //vertical-align: bottom;
+        }
+        &--checkbox {
+            //display: none;
+            //transform: scale(0);
+            line-height: 66px;
+            text-align: center;
+            vertical-align: middle;
+            width: 50px;
+            padding: 0px 10px 0px 10px;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            color: #FFFFFF;
+            font-size: 25px;
+            background-color: $color-tertiary;
         }
     }
 }
 
+@media only screen and (min-width:768px) and (max-width: 990px) {
+
+    .menu-section {
+        & > h2,.menu{
+            width: 85%;
+            margin: auto;
+        }
+        & > .menu {
+            &__plat {
+                width: 80%;
+                margin: auto;
+                margin-top: 15px;
+                margin-bottom: 15px;
+        }
+        }
+    }
+}
+
+@media only screen and (min-width: 991px) {
+    .menu-image--container {
+        height: 400px;
+        img {
+            position: relative;
+            top: -200px;
+        }
+        .image-portrait {
+            top: -270px;
+        }
+    }
+
+    .menu-section {
+        padding: 40px 5% 30px 5%;
+        h2 {
+            justify-content: flex-start;
+            span {
+                margin: 0px 20px 0px 20px;
+            }
+        } 
+    }
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        .sous-menu {
+            width: 32%;
+        }
+    }
+}
