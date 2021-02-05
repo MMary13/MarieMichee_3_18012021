@@ -1,5 +1,6 @@
+/* CSS homepage */
 .intro {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     &__localisation {
         display: flex;
         justify-content: center;
@@ -11,12 +12,11 @@
             border: none;
             background-color: $color-background-input;
             padding-left: 20px;
-            font-size: 18px;
+            font-size: 19px;
         }
         span {
             font-size: 30px;
             padding: 1px;
-            justify-content: center;
         }
         
     }
@@ -24,9 +24,6 @@
         background-color: $color-background-light;
         text-align: center;
         padding: 35px 20px 35px 20px;
-        h1 {
-            margin-bottom: 20px;
-        }
         p {
             color: $color-text-light;
             margin-bottom: 30px;
@@ -36,7 +33,7 @@
 }
 
 .fonctionnement {
-    padding: 0 20px 0 20px;
+    padding: 0 5% 0 5%;
     margin-bottom: 50px;
     &__step {
         display: flex;
@@ -45,10 +42,26 @@
         border-radius: 25px;
         box-shadow: 4px 4px 6px darken($color-background-input,5%);
         margin: 20px 0 20px 0;
-        padding: 5px 10px 5px 0px;
+        padding: 5px 20px 5px 0px;
         background-color: $color-background-light;
+        position: relative;
+        z-index: 1;
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+        }
+        &::after {
+            @include pseudo-elem;
+            background-color: lighten($color: $color-primary, $amount: 30);
+            border-radius: 25px;
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 250ms;
+        }
     }
 }
+
 
 .step__number {
     color: #FFFFFF;
@@ -70,12 +83,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    & > h3 {
-        padding: 30px 5% 30px 5%;
-    }
+    padding: 0 5% 0 5%;
     & > div {
         margin: auto;
-        padding: 0px 5% 30px 5%;
+        padding: 0px 0 30px 0;
     }
 }
 .resto-card {
@@ -133,28 +144,23 @@
 
     .fonctionnement {
         padding: 0px;
-        & > h3 {
-            padding-left: 6%;
-        }
         & > div {
-            padding: 0 5% 0 5%;
+            padding: 0px 10px 0px 10px;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
         }
     }
 
     .restaurants {
-        & > h3 {
-            padding-left: 6%;
-        }
+        padding: 0px;
         & > div {
-            width: 75%;
+            width: 90%;
             margin: auto;
             padding: 10px 0px 30px 0px;
         }
         &__row{
             display: flex;
-            justify-content: space-between;   
+            justify-content: space-around;   
             margin-bottom: 20px;
         }
         .resto-card {
@@ -168,7 +174,6 @@
 
 @media only screen and (min-width:768px) and (max-width: 990px) {
     .fonctionnement {
-        padding: 0 30px 0 30px;
         & > div{
         margin: auto;
         width: 70%;
@@ -178,7 +183,7 @@
     .restaurants {
         & > div {
             margin: 0px;
-            padding: 10 30px 30px 30px;
+            padding: 10px 0px 30px 0px;
         }
         &__row{
             display: flex;

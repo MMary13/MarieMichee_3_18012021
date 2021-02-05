@@ -1,3 +1,4 @@
+/* CSS for the Footer */
 .footer {
     background-color: $color-background-dark;
     padding: 20px 20px 20px 20px;
@@ -19,15 +20,21 @@
             padding-right: 5px;
         }
     }
-}
-
-@media only screen and (min-width:768px)  and (max-width:991px) {
-    .footer {
+    //Responsive rules for the Footer
+    @media only screen and (min-width:768px)  and (max-width:991px) {
         padding: 30px;
         & > div {
-            margin-top: 25px;
             width: 80%;
-            margin: auto;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+
+    @media only screen and (min-width:991px) {
+        padding: 50px;
+        & > div {
+            width: 70%;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -35,15 +42,3 @@
     }
 }
 
-@media only screen and (min-width:991px) {
-    .footer {
-        padding: 30px;
-        & > div {
-            margin-top: 25px;
-            width: 60%;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-    }
-}

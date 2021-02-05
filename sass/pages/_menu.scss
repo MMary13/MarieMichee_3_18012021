@@ -1,3 +1,4 @@
+/* CSS for menu pages */
 .menu-image--container {
     width: 100%;
     height: 250px;
@@ -17,12 +18,10 @@
     background-color: $color-background-light;
     border-radius: 50px 50px 0px 0px;
     position: relative;
-    top: -50px;
-    & > h2 {
-        padding-right: 10px;
+    margin-top: -50px;
+    & > h3 {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 20px;
     }
     &--button {
         display: flex;
@@ -32,14 +31,11 @@
 
 .menu {
     & .sous-menu {
-        margin: 40px 0px 40px 0px;
+        padding: 20px 0px 20px 0px;
     }
-    h3 {
-        font-weight: 300;
-        text-transform: uppercase;
+    h4 {
         display: flex;
         flex-direction: column;
-        margin-bottom: 15px;
         span {
             width: 50px;
             height: 3px;
@@ -66,13 +62,12 @@
             }
         }
         &--prix {
-            padding: 0px 10px 0px 10px;
+            padding: 0px 10px 8px 10px;
             font-size: 16px;
             font-weight: bold;
             width: 50px;
-            line-height: 66px;
             text-align: right;
-            //vertical-align: bottom;
+            align-self: flex-end;
         }
         &--checkbox {
             //display: none;
@@ -80,7 +75,8 @@
             line-height: 66px;
             text-align: center;
             vertical-align: middle;
-            width: 50px;
+            width: 15%;
+            max-width: 80px;
             padding: 0px 10px 0px 10px;
             border-top-right-radius: 15px;
             border-bottom-right-radius: 15px;
@@ -93,8 +89,19 @@
 
 @media only screen and (min-width:768px) and (max-width: 990px) {
 
+    .menu-image--container {
+        height: 300px;
+        img {
+            position: relative;
+            top: -180px;
+        }
+        .image-portrait {
+            top: -250px;
+        }
+    }
+
     .menu-section {
-        & > h2,.menu{
+        & > h3,.menu{
             width: 85%;
             margin: auto;
         }
@@ -123,7 +130,7 @@
 
     .menu-section {
         padding: 40px 5% 30px 5%;
-        h2 {
+        h3 {
             justify-content: flex-start;
             span {
                 margin: 0px 20px 0px 20px;
