@@ -1,0 +1,20 @@
+.loading-spinner {
+    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+    border: solid 20px #cfd0d1;
+    border-bottom-color: darken($color-tertiary,5%);
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    animation: spinner 1.5s ease-in-out 3 both;
+    z-index: 1;
+}
+
+.page-content {
+    opacity: 0;
+    animation: reveal-animation 0ms 4.5s both;
+    z-index: 0;
+}

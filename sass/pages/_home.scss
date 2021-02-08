@@ -13,12 +13,7 @@
             background-color: $color-background-input;
             padding-left: 20px;
             font-size: 19px;
-        }
-        span {
-            font-size: 30px;
-            padding: 1px;
-        }
-        
+        }  
     }
     &__presentation {
         background-color: $color-background-light;
@@ -52,7 +47,7 @@
             }
         }
         &::after {
-            @include pseudo-elem;
+            @include pseudo-elem("");
             background-color: lighten($color: $color-primary, $amount: 30);
             border-radius: 25px;
             opacity: 0;
@@ -62,7 +57,6 @@
     }
 }
 
-
 .step__number {
     color: #FFFFFF;
     border-radius: 75px;
@@ -70,12 +64,6 @@
     background-color: $color-primary;
     position: relative;
     left: -5px;
-}
-
-.step__icon {
-    width: 15px;
-    padding: 0 20px 0 20px;
-    color: $color-background-dark;
 }
 
 .restaurants {
@@ -97,6 +85,7 @@
     box-shadow: 4px 4px 6px darken($color-background-input,5%);
     a {
         text-decoration: none;
+        color: #181818;
     }
     &__image {
             border-radius: 15px 15px 0px 0px;
@@ -130,11 +119,6 @@
         padding: 15px;
         strong {
             font-weight: 700;
-        }
-        span {
-            font-size: 25px;
-            justify-content: center;
-            padding: 3px 2px 0px 2px;
         }
     }
    

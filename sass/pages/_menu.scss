@@ -70,8 +70,8 @@
             align-self: flex-end;
         }
         &--checkbox {
-            //display: none;
-            //transform: scale(0);
+            display: none;
+            transform-origin: right;
             line-height: 66px;
             text-align: center;
             vertical-align: middle;
@@ -83,6 +83,10 @@
             color: #FFFFFF;
             font-size: 25px;
             background-color: $color-tertiary;
+            &:active {
+                display: visible;
+                animation: progress-checkbox 1000ms ease-in-out forwards;
+            }
         }
     }
 }

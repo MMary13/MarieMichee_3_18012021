@@ -5,6 +5,46 @@
   font-style: normal;
 }
 /*  All Variables */
+@keyframes spinner {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
+@keyframes reveal-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-animation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes progress-checkbox {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes progress-menu {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
 *,
 *::after,
 *::before {
@@ -109,7 +149,82 @@ button {
   border: none;
   border-radius: 35px;
   box-shadow: 4px 4px 6px #dddddd;
-  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  position: relative;
+  z-index: 0;
+}
+button:hover::after {
+  opacity: 1;
+}
+button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom right, #ff93e1, #a16be0);
+  border-radius: 35px;
+  box-shadow: 8px 8px 4px #dddddd;
+  opacity: 0;
+  z-index: -1;
+  transition: all 250ms;
+}
+
+.fa-map-marker-alt {
+  font-size: 30px;
+  padding: 1px;
+}
+
+.step__icon {
+  width: 15px;
+  padding: 0 20px 0 20px;
+  color: #353535;
+}
+
+.empty-heart {
+  font-size: 28px;
+  font-weight: 200;
+}
+.empty-heart:active {
+  animation: fade-animation 50ms forwards;
+}
+
+.filled-heart {
+  font-size: 30px;
+  font-weight: 200;
+  color: #FF79DA;
+  transform-origin: left;
+  transform: scaleX(-1);
+  opacity: 0;
+}
+.filled-heart:active {
+  animation: reveal-animation 50ms forwards;
+}
+
+.heart {
+  display: flex;
+}
+
+.loading-spinner {
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  border: solid 20px #cfd0d1;
+  border-bottom-color: #85dcc7;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  animation: spinner 1.5s ease-in-out 3 both;
+  z-index: 1;
+}
+
+.page-content {
+  opacity: 0;
+  animation: reveal-animation 0ms 4.5s both;
+  z-index: 0;
 }
 
 /* CSS for the Header */
@@ -212,10 +327,6 @@ button {
   padding-left: 20px;
   font-size: 19px;
 }
-.intro__localisation span {
-  font-size: 30px;
-  padding: 1px;
-}
 .intro__presentation {
   background-color: #F6F6F6;
   text-align: center;
@@ -268,12 +379,6 @@ button {
   left: -5px;
 }
 
-.step__icon {
-  width: 15px;
-  padding: 0 20px 0 20px;
-  color: #353535;
-}
-
 .restaurants {
   background-color: #F6F6F6;
   display: flex;
@@ -295,6 +400,7 @@ button {
 }
 .resto-card a {
   text-decoration: none;
+  color: #181818;
 }
 .resto-card__image {
   border-radius: 15px 15px 0px 0px;
@@ -329,11 +435,6 @@ button {
 }
 .resto-card__text strong {
   font-weight: 700;
-}
-.resto-card__text span {
-  font-size: 25px;
-  justify-content: center;
-  padding: 3px 2px 0px 2px;
 }
 
 @media only screen and (min-width: 991px) {
@@ -454,6 +555,8 @@ button {
   align-self: flex-end;
 }
 .menu__plat--checkbox {
+  display: none;
+  transform-origin: right;
   line-height: 66px;
   text-align: center;
   vertical-align: middle;
@@ -465,6 +568,10 @@ button {
   color: #FFFFFF;
   font-size: 25px;
   background-color: #99E2D0;
+}
+.menu__plat--checkbox:active {
+  display: visible;
+  animation: progress-checkbox 1000ms ease-in-out forwards;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 990px) {

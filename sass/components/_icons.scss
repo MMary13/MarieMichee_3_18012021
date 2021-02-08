@@ -1,0 +1,34 @@
+.fa-map-marker-alt {
+    font-size: 30px;
+            padding: 1px;
+}
+
+.step__icon {
+    width: 15px;
+    padding: 0 20px 0 20px;
+    color: $color-background-dark;
+}
+
+.empty-heart {
+    font-size: 28px;
+    font-weight: 200;
+    &:active {
+        animation: fade-animation 50ms forwards;
+    }
+}
+
+.filled-heart {
+    font-size: 30px;
+    font-weight: 200;
+    color: $color-secondary;
+    transform-origin: left;
+    transform: scaleX(-1);
+    opacity: 0;
+    &:active {
+        animation: reveal-animation 50ms forwards;
+    }
+}
+
+.heart {
+    display: flex;
+}

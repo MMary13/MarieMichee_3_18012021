@@ -8,14 +8,16 @@
 }
 
 @import "./utils/variables";
-@import "./utils/functions";
+@import "./utils/keyframes";
 @import "./utils/mixins";
 
 @import "./base/base";
 @import "./base/typography";
 
 @import "./components/buttons";
+@import "./components/icons";
 
+@import "./layout/containers";
 @import "./layout/header";
 @import "./layout/footer";
 
