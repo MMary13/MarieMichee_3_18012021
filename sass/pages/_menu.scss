@@ -32,6 +32,8 @@
 .menu {
     & .sous-menu {
         padding: 20px 0px 20px 0px;
+        transform-origin: top;
+        animation: progress-scaleY 1s cubic-bezier(.3,.05,.5,.85) both;
     }
     h4 {
         display: flex;
@@ -49,6 +51,8 @@
         background-color: #FFFFFF;
         border-radius: 15px;
         box-shadow: 4px 4px 6px darken($color-background-input,5%);
+        transform-origin: top;
+        animation: progress-scaleY 1s 60ms cubic-bezier(.4,.05,.5,.95) both;
         &--text {
             font-size: 14px;
             width: 80%;
@@ -70,22 +74,20 @@
             align-self: flex-end;
         }
         &--checkbox {
-            display: none;
+            width: 13%;
+            max-width: 80px;
             transform-origin: right;
+            opacity: 0;
             line-height: 66px;
             text-align: center;
             vertical-align: middle;
-            width: 15%;
-            max-width: 80px;
-            padding: 0px 10px 0px 10px;
             border-top-right-radius: 15px;
             border-bottom-right-radius: 15px;
             color: #FFFFFF;
             font-size: 25px;
             background-color: $color-tertiary;
             &:active {
-                display: visible;
-                animation: progress-checkbox 1000ms ease-in-out forwards;
+                animation: reveal-animation 50ms ease-in-out both, progress-scaleX 1s ease-in-out both;
             }
         }
     }

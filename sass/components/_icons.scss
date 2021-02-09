@@ -12,23 +12,21 @@
 .empty-heart {
     font-size: 28px;
     font-weight: 200;
-    &:active {
-        animation: fade-animation 50ms forwards;
-    }
+    position: absolute;
+    z-index: 0;
 }
 
 .filled-heart {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 200;
-    color: $color-secondary;
-    transform-origin: left;
-    transform: scaleX(-1);
+    position: relative;
+    z-index: 1;
+    color: linear-gradient(to bottom, $color-primary, $color-secondary);
     opacity: 0;
-    &:active {
-        animation: reveal-animation 50ms forwards;
+    &:hover {
+        cursor: pointer;
     }
-}
-
-.heart {
-    display: flex;
+    &:active {
+        animation: reveal-animation 0ms forwards;
+    }
 }
