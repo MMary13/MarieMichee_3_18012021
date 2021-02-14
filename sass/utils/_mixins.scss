@@ -1,5 +1,5 @@
-@mixin pseudo-elem($content) {
-    content: $content;
+@mixin pseudo-elem {
+    content: "";
     position: absolute;
     top: 0;
     right: 0;

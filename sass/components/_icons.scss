@@ -6,7 +6,7 @@
 .step__icon {
     width: 15px;
     padding: 0 20px 0 20px;
-    color: $color-background-dark;
+    color: lighten($color-background-dark,20%);
 }
 
 .empty-heart {
@@ -26,7 +26,7 @@
     &:hover {
         cursor: pointer;
     }
-    &:active {
-        animation: reveal-animation 0ms forwards;
+    &:hover, :active, :focus, :visited {
+        animation: reveal-animation 1s both;
     }
 }

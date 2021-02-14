@@ -13,6 +13,24 @@
     transform: rotate(270deg);
   }
 }
+@keyframes color-progress {
+  0% {
+    border-color: #99E2D0;
+    border-bottom-color: #EAEAEA;
+  }
+  50% {
+    border-color: #FF79DA;
+    border-bottom-color: #EAEAEA;
+  }
+  75% {
+    border-color: #9356DC;
+    border-bottom-color: #EAEAEA;
+  }
+  100% {
+    border-color: #99E2D0;
+    border-bottom-color: #EAEAEA;
+  }
+}
 @keyframes reveal-animation {
   from {
     opacity: 0;
@@ -53,22 +71,12 @@
     transform: scaleY(1);
   }
 }
-@keyframes color-progress {
-  0% {
-    border-color: #99E2D0;
-    border-bottom-color: #EAEAEA;
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
   }
-  50% {
-    border-color: #FF79DA;
-    border-bottom-color: #EAEAEA;
-  }
-  75% {
-    border-color: #9356DC;
-    border-bottom-color: #EAEAEA;
-  }
-  100% {
-    border-color: #99E2D0;
-    border-bottom-color: #EAEAEA;
+  to {
+    transform: rotate(360deg);
   }
 }
 *,
@@ -212,7 +220,7 @@ button::after {
 .step__icon {
   width: 15px;
   padding: 0 20px 0 20px;
-  color: #353535;
+  color: #686868;
 }
 
 .empty-heart {
@@ -233,8 +241,8 @@ button::after {
 .filled-heart:hover {
   cursor: pointer;
 }
-.filled-heart:active {
-  animation: reveal-animation 0ms forwards;
+.filled-heart:hover, .filled-heart :active, .filled-heart :focus, .filled-heart :visited {
+  animation: reveal-animation 1s both;
 }
 
 .loading-spinner {
@@ -243,7 +251,7 @@ button::after {
   background-color: #F6F6F6;
   position: fixed;
   z-index: 3;
-  animation: fade-animation 50ms 3.5s both, translate-z 0ms 3.5s forwards;
+  animation: fade-animation 50ms 3s both, translate-z 0ms 3s forwards;
 }
 .loading-spinner span {
   font-size: 36px;
@@ -264,14 +272,12 @@ button::after {
   border: dotted 20px #85dcc7;
   border-bottom-color: #EAEAEA;
   border-radius: 50%;
-  animation: spinner 1200ms cubic-bezier(0.3, 0.75, 0.5, 1) 3 both, color-progress 2s ease-in-out 2 both;
+  animation: spinner 1s cubic-bezier(0.3, 0.75, 0.5, 1) 3 both, color-progress 2s ease-in-out 2 both;
 }
 
-.page-content {
+.page_content {
   position: relative;
   z-index: 1;
-  opacity: 0;
-  animation: reveal-animation 50ms 3.5s both;
 }
 
 /* CSS for the Header */
@@ -561,7 +567,26 @@ button::after {
 .menu .sous-menu {
   padding: 20px 0px 20px 0px;
   transform-origin: top;
-  animation: progress-scaleY 1s cubic-bezier(0.3, 0.05, 0.5, 0.85) both;
+}
+.menu .sous-menu :nth-child(0) {
+  transform-origin: top;
+  animation: progress-scaleY 750ms 200ms cubic-bezier(0.4, 0.05, 0.5, 0.95) both;
+}
+.menu .sous-menu :nth-child(1) {
+  transform-origin: top;
+  animation: progress-scaleY 750ms 400ms cubic-bezier(0.4, 0.05, 0.5, 0.95) both;
+}
+.menu .sous-menu :nth-child(2) {
+  transform-origin: top;
+  animation: progress-scaleY 750ms 600ms cubic-bezier(0.4, 0.05, 0.5, 0.95) both;
+}
+.menu .sous-menu :nth-child(3) {
+  transform-origin: top;
+  animation: progress-scaleY 750ms 800ms cubic-bezier(0.4, 0.05, 0.5, 0.95) both;
+}
+.menu .sous-menu :nth-child(4) {
+  transform-origin: top;
+  animation: progress-scaleY 750ms 1000ms cubic-bezier(0.4, 0.05, 0.5, 0.95) both;
 }
 .menu h4 {
   display: flex;
@@ -580,7 +605,9 @@ button::after {
   border-radius: 15px;
   box-shadow: 4px 4px 6px #dddddd;
   transform-origin: top;
-  animation: progress-scaleY 1s 60ms cubic-bezier(0.4, 0.05, 0.5, 0.95) both;
+}
+.menu__plat:active {
+  animation: reveal-animation 50ms ease-in-out both, progress-scaleX 1s ease-in-out both;
 }
 .menu__plat--text {
   font-size: 14px;
@@ -618,6 +645,9 @@ button::after {
 }
 .menu__plat--checkbox:active {
   animation: reveal-animation 50ms ease-in-out both, progress-scaleX 1s ease-in-out both;
+}
+.menu__plat--checkbox:active .fa-check-circle {
+  animation: spin 50ms ease-in-out both;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 990px) {

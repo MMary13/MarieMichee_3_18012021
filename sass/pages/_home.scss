@@ -47,7 +47,7 @@
             }
         }
         &::after {
-            @include pseudo-elem("");
+            @include pseudo-elem;
             background-color: lighten($color: $color-primary, $amount: 30);
             border-radius: 25px;
             opacity: 0;

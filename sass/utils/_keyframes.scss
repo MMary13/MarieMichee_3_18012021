@@ -7,6 +7,24 @@
     }
   }
 
+  @keyframes color-progress {
+    0% {
+        border-color: $color-tertiary;
+        border-bottom-color: $color-background-input;
+    }
+    50% {
+        border-color: $color-secondary;
+        border-bottom-color: $color-background-input;
+    }
+    75% {
+        border-color: $color-primary;
+        border-bottom-color: $color-background-input;
+    } 100% {
+        border-color: $color-tertiary;;
+        border-bottom-color: $color-background-input;
+    }
+}
+
 @keyframes reveal-animation {
     from {
         opacity: 0;
@@ -52,20 +70,11 @@
     }
 }
 
-@keyframes color-progress {
-    0% {
-        border-color: $color-tertiary;
-        border-bottom-color: $color-background-input;
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
     }
-    50% {
-        border-color: $color-secondary;
-        border-bottom-color: $color-background-input;
-    }
-    75% {
-        border-color: $color-primary;
-        border-bottom-color: $color-background-input;
-    } 100% {
-        border-color: $color-tertiary;;
-        border-bottom-color: $color-background-input;
+    to {
+        transform: rotate(360deg);
     }
 }

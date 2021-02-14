@@ -18,7 +18,7 @@ button {
          }
     }
     &::after {
-        @include pseudo-elem("");
+        @include pseudo-elem;
         background: linear-gradient(to bottom right, lighten($color-secondary,5), lighten($color-primary,5));
         border-radius: 35px;
         box-shadow: 8px 8px 4px darken($color-background-input,5%);

@@ -33,7 +33,14 @@
     & .sous-menu {
         padding: 20px 0px 20px 0px;
         transform-origin: top;
-        animation: progress-scaleY 1s cubic-bezier(.3,.05,.5,.85) both;
+        @for $i from 0 to 5 {
+            $j: $i+1;
+            $delay: ($j*200ms);
+            :nth-child(#{$i}) {
+                transform-origin: top;
+                animation: progress-scaleY 750ms $delay cubic-bezier(.4,.05,.5,.95) both;
+            }
+        }
     }
     h4 {
         display: flex;
@@ -52,7 +59,9 @@
         border-radius: 15px;
         box-shadow: 4px 4px 6px darken($color-background-input,5%);
         transform-origin: top;
-        animation: progress-scaleY 1s 60ms cubic-bezier(.4,.05,.5,.95) both;
+        &:active {
+            animation: reveal-animation 50ms ease-in-out both, progress-scaleX 1s ease-in-out both;
+        }
         &--text {
             font-size: 14px;
             width: 80%;
@@ -88,6 +97,9 @@
             background-color: $color-tertiary;
             &:active {
                 animation: reveal-animation 50ms ease-in-out both, progress-scaleX 1s ease-in-out both;
+                .fa-check-circle {
+                    animation: spin 50ms ease-in-out both;
+                }
             }
         }
     }
