@@ -21,7 +21,7 @@
     font-weight: 200;
     position: relative;
     z-index: 2;
-    color: linear-gradient(to bottom, $color-primary, $color-secondary);
+    color: $color-secondary;
     opacity: 0;
     &:hover {
         cursor: pointer;
@@ -30,7 +30,7 @@
         animation: reveal-animation 1s both;
     }
 }
-.heart {
+.resto-card >.heart {
     z-index: 1;
     position: relative;
     top: -45px;
