@@ -80,12 +80,15 @@
 .resto-card {
     max-width: 450px;
     margin: 35px 0px 25px 0px;
+    height: 280px;
     background-color: #FFFFFF;
     border-radius: 15px 15px 15px 15px;
     box-shadow: 4px 4px 6px darken($color-background-input,5%);
     a {
         text-decoration: none;
         color: #181818;
+        z-index: 0;
+        padding: 0px;
     }
     &__image {
             border-radius: 15px 15px 0px 0px;
@@ -113,10 +116,7 @@
             }
     }
     &__text {
-        display: flex;
-        justify-items: baseline;
-        justify-content: space-between;
-        padding: 15px;
+        padding: 15px 15px 0px 15px;
     }
    
 }
