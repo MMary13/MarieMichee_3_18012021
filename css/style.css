@@ -111,7 +111,7 @@ h2 {
 
 h3 {
   font-family: "shrikhandregular", sans-serif;
-  font-size: 27px;
+  font-size: 28px;
   font-weight: 500;
   padding: 0px 20px 20px 10px;
 }
@@ -224,25 +224,34 @@ button::after {
 }
 
 .empty-heart {
-  font-size: 28px;
-  font-weight: 200;
+  font-size: 30px;
+  padding: 2px;
   position: absolute;
   z-index: 1;
 }
 
 .filled-heart {
-  font-size: 28px;
-  font-weight: 200;
+  font-size: 31px;
+  padding: 2px 2px 2px 2px;
   position: relative;
-  z-index: 2;
+  top: 2px;
+  left: -0.5px;
   color: #FF79DA;
+  z-index: 2;
   opacity: 0;
+  background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.filled-heart:hover {
+.filled-heart:hover, .filled-heart :active {
   cursor: pointer;
+  animation: reveal-animation 1s ease-in-out forwards;
 }
-.filled-heart:hover, .filled-heart :active, .filled-heart :focus, .filled-heart :visited {
-  animation: reveal-animation 1s both;
+
+.heart {
+  width: fit-content;
+  height: 50px;
 }
 
 .resto-card > .heart {
@@ -250,7 +259,6 @@ button::after {
   position: relative;
   top: -45px;
   left: 85%;
-  width: fit-content;
 }
 
 .loading-spinner {
@@ -565,6 +573,7 @@ button::after {
 }
 .menu-section > h3 {
   display: flex;
+  justify-items: center;
   justify-content: space-between;
 }
 .menu-section--button {

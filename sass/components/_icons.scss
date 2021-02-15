@@ -10,30 +10,37 @@
 }
 
 .empty-heart {
-    font-size: 28px;
-    font-weight: 200;
+    font-size: 30px;
+    padding: 2px;
     position: absolute;
     z-index: 1;
 }
 
 .filled-heart {
-    font-size: 28px;
-    font-weight: 200;
+    font-size: 31px;
+    padding: 2px 2px 2px 2px;
     position: relative;
-    z-index: 2;
+    top: 2px;
+    left: -0.5px;
     color: $color-secondary;
+    z-index: 2;
     opacity: 0;
-    &:hover {
+    background: -webkit-linear-gradient($color-secondary, $color-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &:hover, :active {
         cursor: pointer;
+        animation: reveal-animation 1s ease-in-out forwards;
     }
-    &:hover, :active, :focus, :visited {
-        animation: reveal-animation 1s both;
-    }
+}
+.heart {
+    width: fit-content;
+    height: 50px;
 }
 .resto-card >.heart {
     z-index: 1;
     position: relative;
     top: -45px;
     left: 85%;
-    width: fit-content;
 }
