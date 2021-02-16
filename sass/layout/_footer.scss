@@ -1,0 +1,44 @@
+/* CSS for the Footer */
+.footer {
+    background-color: $color-background-dark;
+    padding: 20px 20px 20px 20px;
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+    &__logo {
+        width: 200px;
+        margin-bottom: 15px;
+        filter: invert(100%);
+    }
+    &__link {
+        text-decoration: none;
+        color: #FFFFFF;
+        margin-bottom: 10px;
+        span {
+            width: 18px;
+            padding-right: 5px;
+        }
+    }
+    //Responsive rules for the Footer
+    @media only screen and (min-width:768px)  and (max-width:991px) {
+        padding: 30px;
+        & > div {
+            width: 80%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+
+    @media only screen and (min-width:991px) {
+        padding: 50px;
+        & > div {
+            width: 70%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+}
+

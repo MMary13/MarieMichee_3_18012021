@@ -1,0 +1,73 @@
+@keyframes spinner {
+    0% {
+      transform:  rotate(0deg);
+    }
+    100% {
+        transform: rotate(270deg);
+    }
+  }
+
+  @keyframes color-progress {
+    0% {
+        border-color: $color-tertiary;
+        border-bottom-color: $color-background-input;
+    }
+    50% {
+        border-color: $color-secondary;
+        border-bottom-color: $color-background-input;
+    }
+    75% {
+        border-color: $color-primary;
+        border-bottom-color: $color-background-input;
+    } 100% {
+        border-color: $color-tertiary;;
+        border-bottom-color: $color-background-input;
+    }
+}
+
+@keyframes reveal-animation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-animation {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+} 
+
+@keyframes translate-z {
+    from {
+        z-index: 1;
+    }
+    to {
+        z-index: -1;
+    }
+}
+
+@keyframes progress-scaleX {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+
+@keyframes progress-scaleY {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+

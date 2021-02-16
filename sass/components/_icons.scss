@@ -1,0 +1,56 @@
+/* Icons design */
+.fa-map-marker-alt {
+    font-size: 30px;
+            padding: 1px;
+}
+
+.step__icon {
+    width: 15px;
+    padding: 0 20px 0 20px;
+    color: lighten($color-background-dark,20%);
+}
+
+//Heart checkbox
+.heart-checkbox {
+    display: flex;
+    cursor: pointer;
+    .checked {
+        justify-self: flex-start;
+    }
+}
+
+.resto-card >.heart-checkbox {
+    z-index: 1;
+    position: relative;
+    top: -45px;
+    left: 85%;
+}
+
+.heart-checkbox input[type="checkbox"]{
+    display: none;
+}
+
+.heart-checkbox .checked {
+    font-size: 30px;
+    color: $color-secondary;
+    background: linear-gradient($color-primary,$color-secondary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+}
+
+.heart-checkbox input[type="checkbox"] ~ .unchecked {
+    font-size: 30px;
+}
+
+.heart-checkbox input[type="checkbox"]:checked ~ .checked {
+    opacity: 1;
+}
+
+.heart-checkbox input[type="checkbox"]:checked ~ .unchecked {
+    opacity:0;
+}
+

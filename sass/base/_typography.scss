@@ -1,0 +1,93 @@
+/* Typography rules */
+body {
+    font-family: $text-font, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+    color: $color-text;
+}
+
+h1 {
+    font-family: $text-font, sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    padding: 0px 0px 20px 0px;
+}
+
+h2 {
+    font-family: $text-font, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 20px 0px 0px 0px;
+}
+
+h3 {
+    font-family: $title-font, sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    padding: 0px 20px 20px 10px;
+}
+
+h4 {
+    font-family: $text-font, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 0px 0px 15px 0px;
+}
+
+strong {
+    font-weight: 700;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+    body {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+        & + p {
+            font-size: 22px;
+        }
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 32px;
+    }
+
+    h4 {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (min-width: 991px) {
+    body {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 34px;
+        & + p {
+            font-size: 26px;
+        }
+    }
+
+    h2 {
+        padding-left: 6%;
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 32px;
+    }
+
+    h4 {
+        font-size: 22px;
+    }
+}
+

@@ -1,0 +1,34 @@
+.loading-spinner {
+    width: 100%;
+    height: 100%;
+    background-color: $color-background-light;
+    position: fixed;
+    z-index: 3;
+    span {
+        font-size: 36px;
+        color: darken($color-background-input,20%);
+        position: relative;
+        top: 20%;
+        width: 125px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &--circle {
+        height: 200px;
+        width: 200px;
+        position: relative;
+        margin: auto;
+        top: 30%;
+        border: dotted 20px darken($color-tertiary,5%);
+        border-bottom-color: $color-background-input;
+        border-radius: 50%;
+        animation: spinner 1s cubic-bezier(.3,.75,.5,1) 3 both , color-progress 2s ease-in-out 2 both;
+    }
+    animation: fade-animation 50ms 3s both, translate-z 0ms 3s forwards;
+}
+.page_content {
+    position: relative;
+    z-index: 1;
+    //animation: reveal-animation 50ms 3s both;
+}

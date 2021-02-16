@@ -1,0 +1,20 @@
+{
+  "name": "mariemichee_3_18012021",
+  "version": "1.0.0",
+  "description": "Dynamisez une page web avec des animations CSS",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MMary13/MarieMichee_3_18012021.git"
+  },
+  "author": "Marie Michée",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MMary13/MarieMichee_3_18012021/issues"
+  },
+  "homepage": "https://github.com/MMary13/MarieMichee_3_18012021#readme"
+}
