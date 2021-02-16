@@ -24,74 +24,103 @@
     <section class="menu-section">
       <h3>
         <span>La palette du goût</span> 
-        <span class="heart">
-          <span class="empty-heart"><i class="far fa-heart"></i></span>
-          <span class="filled-heart"><i class="fas fa-heart"></i></span>
-        </span>
+        <label class="heart-checkbox">
+          <input type="checkbox"/>
+          <i class="far fa-heart unchecked"></i>
+          <i class="fas fa-heart checked"></i>
+        </label>
       </h3>
       
       <div class="menu">
         <div class="sous-menu">
           <h4>Entrées <span></span></h4>
-          <div class="menu__plat plat--1">
-            <p class="menu__plat--text"><span>Fricassée d'escargot</span><br>Au piment d'Espelette </p>
-            <p class="menu__plat--prix">25€</p>
-            <span class="menu__plat--checkbox"><i class="fas fa-check-circle"></i></span>
-          </div>
 
-          <div class="menu__plat plat--2">
-            <p class="menu__plat--text"><span>Foie gras de canard mi-cuit</span><br>Et ses copeaux de truffe noire</p>
-            <p class="menu__plat--prix">35€</p>
-            <span class="menu__plat--checkbox"><i class="fas fa-check-circle"></i></span>
-          </div>
+          <label class="menu__plat plat--1">
+            <span class="menu__plat--description">
+              <span class="description__text"><strong>Fricassée d'escargot</strong><br>Au piment d'Espelette </span>
+              <span class="description__prix">25€</span>
+            </span>
+            <input type="checkbox">
+            <span class="checked"><i class="fas fa-check-circle"></i></span>
+          </label>
 
-          <div class="menu__plat plat--3">
-            <p class="menu__plat--text"><span>Oeuf au plat</span><br>Assaisonné à la truffe sur lit de caviar</p>
-            <p class="menu__plat--prix">20€</p>
-            <span class="menu__plat--checkbox"><i class="fas fa-check-circle"></i></span>
-          </div>
+          <label class="menu__plat plat--2">
+            <span class="menu__plat--description">
+              <span class="description__text"><strong>Foie gras de canard mi-cuit</strong><br>Et ses copeaux de truffe noire</span>
+              <span class="description__prix">35€</span>
+            </span>
+            <input type="checkbox">
+            <span class="checked"><i class="fas fa-check-circle"></i></span>
+          </label>
+
+          <label class="menu__plat plat--3">
+            <span class="menu__plat--description">
+              <span class="description__text"><strong>Oeuf au plat</strong><br>Assaisonné à la truffe sur lit de caviar</span>
+              <span class="description__prix">20€</span>
+              </span>
+            <input type="checkbox">
+            <span class="checked"><i class="fas fa-check-circle"></i></span>
+          </label>
         </div>
 
         <div class="sous-menu">
           <h4>Plats <span></span></h4>
-          <div class="menu__plat plat--1">
-            <p class="menu__plat--text"><span>Filet de boeuf aux herbes</span><br>Accompagné de sa ribambelle de légumes</p>
-            <p class="menu__plat--prix">40€</p>
-            <span class="menu__plat--checkbox"><i class="fas fa-check-circle"></i></span>
-          </div>
+          <label class="menu__plat plat--1">
+            <span class="menu__plat--description">
+              <span class="description__text"><strong>Filet de boeuf aux herbes</strong><br>Accompagné de sa ribambelle de légumes</span>
+              <span class="description__prix">40€</span>
+            </span>
+            <input type="checkbox">
+            <span class="checked"><i class="fas fa-check-circle"></i></span>
+          </label>
 
-          <div class="menu__plat plat--2">
-            <p class="menu__plat--text"><span>Parmentier de queue de boeuf</span><br>À la truffe noire sur sa purée de panais</p>
-            <p class="menu__plat--prix">35€</p>
-            <span class="menu__plat--checkbox"><i class="fas fa-check-circle"></i></span>
-          </div>
+          <label class="menu__plat plat--2">
+            <span class="menu__plat--description">
+              <span class="description__text"><strong>Parmentier de queue de boeuf</strong><br>À la truffe noire sur sa purée de panais</span>
+              <span class="description__prix">35€</span>
+            </span>
+            <input type="checkbox">
+            <span class="checked"><i class="fas fa-check-circle"></i></span>
+          </label>
 
-          <div class="menu__plat plat--3">
-            <p class="menu__plat--text"><span>Filet de turbot</span><br>Aux agrumes</p>
-            <p class="menu__plat--prix">44€</p>
-            <span class="menu__plat--checkbox"><i class="fas fa-check-circle"></i></span>
-          </div>
+          <label class="menu__plat plat--3">
+            <span class="menu__plat--description">
+              <span class="description__text"><strong>Filet de turbot</strong><br>Aux agrumes</span>
+              <span class="description__prix">44€</span>
+            </span>
+            <input type="checkbox">
+            <span class="checked"><i class="fas fa-check-circle"></i></span>
+          </label>
         </div>
 
         <div class="sous-menu">
           <h4>Desserts <span></span></h4>
-          <div class="menu__plat plat--1">
-            <p class="menu__plat--text"><span>Paris-Brest</span><br>Revisité</p>
-            <p class="menu__plat--prix">18€</p>
-            <span class="menu__plat--checkbox"><i class="fas fa-check-circle"></i></span>
-          </div>
+          <label class="menu__plat plat--1">
+            <span class="menu__plat--description">
+              <span class="description__text"><strong>Paris-Brest</strong><br>Revisité</span>
+              <span class="description__prix">18€</span>
+            </span>
+            <input type="checkbox">
+            <span class="checked"><i class="fas fa-check-circle"></i></span>
+          </label>
 
-          <div class="menu__plat plat--2">
-            <p class="menu__plat--text"><span>Macaron au chocolat d'exception</span><br>Et glace à la vanille de Madagascar</p>
-            <p class="menu__plat--prix">22€</p>
-            <span class="menu__plat--checkbox"><i class="fas fa-check-circle"></i></span>
-          </div>
+          <label class="menu__plat plat--2">
+            <span class="menu__plat--description">
+              <span class="description__text"><strong>Macaron au chocolat d'exception</strong><br>Et glace à la vanille de Madagascar</span>
+              <span class="description__prix">22€</span>
+            </span>
+            <input type="checkbox">
+            <span class="checked"><i class="fas fa-check-circle"></i></span>
+          </label>
 
-          <div class="menu__plat plat--3">
-            <p class="menu__plat--text"><span>Mousse au chocolat</span><br>Au piment d'Espelette et à la truffe noire</p>
-            <p class="menu__plat--prix">23€</p>
-            <span class="menu__plat--checkbox"><i class="fas fa-check-circle"></i></span>
-          </div>
+          <label class="menu__plat plat--3">
+            <span class="menu__plat--description">
+              <span class="description__text"><strong>Mousse au chocolat</strong><br>Au piment d'Espelette et à la truffe noire</span>
+              <span class="description__prix">23€</span>
+            </span>
+            <input type="checkbox">
+            <span class="checked"><i class="fas fa-check-circle"></i></span>
+          </label>
         </div>
       </div>
       <div class="menu-section--button">

@@ -216,43 +216,47 @@ button::after {
   color: #686868;
 }
 
-.empty-heart {
-  font-size: 30px;
-  padding: 2px;
-  position: absolute;
-  z-index: 1;
-}
-
-.filled-heart {
-  font-size: 31px;
-  padding: 2px 2px 2px 2px;
-  position: relative;
-  top: 2px;
-  left: -0.5px;
-  color: #FF79DA;
-  z-index: 2;
-  opacity: 0;
-  background: -webkit-linear-gradient(#9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: opacity 500ms ease-in-out;
-}
-.filled-heart:active {
+.heart-checkbox {
+  display: flex;
   cursor: pointer;
-  opacity: 1;
+}
+.heart-checkbox .checked {
+  justify-self: flex-start;
 }
 
-.heart {
-  width: fit-content;
-  height: 50px;
-}
-
-.resto-card > .heart {
+.resto-card > .heart-checkbox {
   z-index: 1;
   position: relative;
   top: -45px;
   left: 85%;
+}
+
+.heart-checkbox input[type=checkbox] {
+  display: none;
+}
+
+.heart-checkbox .checked {
+  font-size: 30px;
+  color: #FF79DA;
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+}
+
+.heart-checkbox input[type=checkbox] ~ .unchecked {
+  font-size: 30px;
+}
+
+.heart-checkbox input[type=checkbox]:checked ~ .checked {
+  opacity: 1;
+}
+
+.heart-checkbox input[type=checkbox]:checked ~ .unchecked {
+  opacity: 0;
 }
 
 .loading-spinner {
@@ -606,6 +610,7 @@ button::after {
 }
 .menu__plat {
   display: flex;
+  justify-items: flex-start;
   margin-bottom: 15px;
   background-color: #FFFFFF;
   border-radius: 15px;
@@ -615,35 +620,40 @@ button::after {
 .menu__plat:hover {
   cursor: pointer;
 }
-.menu__plat--text {
+.menu__plat--description {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  transform-origin: left;
+  transition: width 1s ease-in-out;
+}
+.menu__plat--description .description__text {
   font-size: 14px;
   width: 80%;
   padding: 8px 0px 8px 8px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transform-origin: left;
+  transition: width 1s ease-in-out;
 }
-.menu__plat--text span {
+.menu__plat--description .description__text strong {
   font-size: 16px;
   font-weight: 600;
 }
-.menu__plat--prix {
-  padding: 0px 10px 8px 10px;
+.menu__plat--description .description__prix {
+  padding: 0px 10px 8px 0px;
   font-size: 16px;
   font-weight: bold;
   width: 50px;
   text-align: right;
   align-self: flex-end;
 }
-.menu__plat--prix:active + .menu__plat--checkbox {
-  opacity: 1;
-  transform: scaleX(1);
+.menu__plat input[type=checkbox] {
+  display: none;
 }
-.menu__plat--prix:active + .menu__plat--checkbox > .fa-check-circle {
-  transform: rotate(360deg);
-}
-.menu__plat--checkbox {
-  width: 13%;
+.menu__plat .checked {
+  width: 0%;
   max-width: 80px;
   line-height: 66px;
   text-align: center;
@@ -655,19 +665,24 @@ button::after {
   background-color: #99E2D0;
   opacity: 0;
   transform-origin: right;
-  transform: scaleX(0.5);
-  transition: opacity 500ms ease-in-out, transform 1s ease-in-out;
+  transition: width 1s ease-in-out, opacity 0ms 320ms;
 }
-.menu__plat--checkbox .fa-check-circle {
-  transform-origin: center center;
+.menu__plat .checked .fa-check-circle {
   transform: rotate(0deg);
+  transform-origin: center center;
   transition: transform 1s ease-in-out;
 }
-.menu__plat--checkbox:active {
-  opacity: 1;
-  transform: scaleX(1);
+.menu__plat input[type=checkbox]:checked .menu__plat--description {
+  width: 80%;
 }
-.menu__plat--checkbox:active > .fa-check-circle {
+.menu__plat input[type=checkbox]:checked .menu__plat--description .description__text {
+  width: 50%;
+}
+.menu__plat input[type=checkbox]:checked ~ .checked {
+  width: 15%;
+  opacity: 1;
+}
+.menu__plat input[type=checkbox]:checked ~ .checked .fa-check-circle {
   transform: rotate(360deg);
 }
 

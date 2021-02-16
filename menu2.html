@@ -25,80 +25,111 @@
     <section class="menu-section">
       <h3>
         <span>La note enchantée</span> 
-        <span class="heart">
-          <span class="empty-heart"><i class="far fa-heart"></i></span>
-          <span class="filled-heart"><i class="fas fa-heart"></i></span>
-        </span>
+        <label class="heart-checkbox">
+          <input type="checkbox"/>
+          <i class="far fa-heart unchecked"></i>
+          <i class="fas fa-heart checked"></i>
+        </label>
       </h3>
 
       <div class="menu">
         <div class="sous-menu">
           <h4>Entrées <span></span></h4>
-          <div class="menu__plat plat--1">
-            <p class="menu__plat--text"><span>Ravioles de foie gras</span><br>Accompagnés de leur crème à la truffe</p>
-            <p class="menu__plat--prix">25€</p>
-            <span class="fas fa-check-circle menu__plat--checkbox"></span>
-          </div>
+          <label class="menu__plat plat--1">
+            <span class="menu__plat--description">
+              <span class="description__text"><strong>Ravioles de foie gras</strong><br>Accompagnés de leur crème à la truffe</span>
+              <span class="description__prix">25€</span>
+            </span>
+            <input type="checkbox">
+            <span class="checked"><i class="fas fa-check-circle"></i></span>
+          </label>
 
-          <div class="menu__plat plat--2">
-            <p class="menu__plat--text"><span>Caviar osciètre</span><br>Sur blini à la farine de blé noir</p>
-            <p class="menu__plat--prix">35€</p>
-            <span class="fas fa-check-circle menu__plat--checkbox"></span>
-          </div>
+          <label class="menu__plat plat--2">
+            <span class="menu__plat--description">
+              <span class="description__text"><strong>Caviar osciètre</strong><br>Sur blini à la farine de blé noir</span>
+              <span class="description__prix">35€</span>
+            </span>
+            <input type="checkbox">
+            <span class="checked"><i class="fas fa-check-circle"></i></span>
+          </label>
 
-          <div class="menu__plat plat--3">
-            <p class="menu__plat--text"><span>Homard et espuma de potiron</span><br>Mariné aux zestes d'orange</p>
-            <p class="menu__plat--prix">20€</p>
-            <span class="fas fa-check-circle menu__plat--checkbox"></span>
-          </div>
+          <label class="menu__plat plat--3">
+            <span class="menu__plat--description">
+              <span class="description__text"><strong>Homard et espuma de potiron</strong><br>Mariné aux zestes d'orange</span>
+              <span class="description__prix">20€</span>
+            </span>
+            <input type="checkbox">
+            <span class="checked"><i class="fas fa-check-circle"></i></span>
+          </label>
 
-          <div class="menu__plat plat--4">
-            <p class="menu__plat--text"><span>Foie gras de canard cuit entier</span><br>Confiture de figue et pain toasté</p>
-            <p class="menu__plat--prix">35€</p>
-            <span class="fas fa-check-circle menu__plat--checkbox"></span>
-          </div>
+          <label class="menu__plat plat--4">
+            <span class="menu__plat--description">
+              <span class="description__text"><strong>Foie gras de canard cuit entier</strong><br>Confiture de figue et pain toasté</span>
+              <span class="description__prix">35€</span>
+            </span>
+            <input type="checkbox">
+            <span class="checked"><i class="fas fa-check-circle"></i></span>
+          </label>
         </div>
 
         <div class="sous-menu">
           <h4>Plats <span></span></h4>
-          <div class="menu__plat plat--1">
-            <p class="menu__plat--text"><span>Noix de coquilles Saint-Jacques</span><br>Sur lit de purée de céleri-rave</p>
-            <p class="menu__plat--prix">40€</p>
-            <span class="fas fa-check-circle menu__plat--checkbox"></span>
-          </div>
+          <label class="menu__plat plat--1">
+            <span class="menu__plat--description">
+              <span class="description__text"><strong>Noix de coquilles Saint-Jacques</strong><br>Sur lit de purée de céleri-rave</span>
+              <span class="description__prix">40€</span>
+            </span>
+            <input type="checkbox">
+            <span class="checked"><i class="fas fa-check-circle"></i></span>
+          </label>
 
-          <div class="menu__plat plat--2">
-            <p class="menu__plat--text"><span>Langoustine poêlée</span><br>Purée de patate douce</p>
-            <p class="menu__plat--prix">35€</p>
-            <span class="fas fa-check-circle menu__plat--checkbox"></span>
-          </div>
+          <label class="menu__plat plat--2">
+            <span class="menu__plat--description">
+              <span class="description__text"><strong>Langoustine poêlée</strong><br>Purée de patate douce</span>
+              <span class="description__prix">35€</span>
+            </span>
+            <input type="checkbox">
+            <span class="checked"><i class="fas fa-check-circle"></i></span>
+          </label>
 
-          <div class="menu__plat plat--3">
-            <p class="menu__plat--text"><span>Mijoté de queue de boeuf</span><br>Et riz sauvage aux zestes de citron</p>
-            <p class="menu__plat--prix">44€</p>
-            <span class="fas fa-check-circle menu__plat--checkbox"></span>
-          </div>
+          <label class="menu__plat plat--3">
+            <span class="menu__plat--description">
+              <span class="description__text"><strong>Mijoté de queue de boeuf</strong><br>Et riz sauvage aux zestes de citron</span>
+              <span class="description__prix">44€</span>
+            </span>
+            <input type="checkbox">
+            <span class="checked"><i class="fas fa-check-circle"></i></span>
+          </label>
         </div>
 
         <div class="sous-menu">
           <h4>Desserts <span></span></h4>
-          <div class="menu__plat plat--1">
-            <p class="menu__plat--text"><span>Macaron noisette et chocolat</span><br>Glace au caramel brun et sel de Guérande</p>
-            <p class="menu__plat--prix">18€</p>
-            <span class="fas fa-check-circle menu__plat--checkbox"></span>
-          </div>
+          <label class="menu__plat plat--1">
+            <span class="menu__plat--description">
+              <span class="description__text"><strong>Macaron noisette et chocolat</strong><br>Glace au caramel brun et sel de Guérande</span>
+              <span class="description__prix">18€</span>
+            </span>
+            <input type="checkbox">
+            <span class="checked"><i class="fas fa-check-circle"></i></span>
+          </label>
 
-          <div class="menu__plat plat--2">
-            <p class="menu__plat--text"><span>Baba au rhum revisité</span><br>Avec son coulis de citron</p>
-            <p class="menu__plat--prix">22€</p>
-            <span class="fas fa-check-circle menu__plat--checkbox"></span>
-          </div>
+          <label class="menu__plat plat--2">
+            <span class="menu__plat--description">
+              <span class="description__text"><strong>Baba au rhum revisité</strong><br>Avec son coulis de citron</span>
+              <span class="description__prix">22€</span>
+            </span>
+            <input type="checkbox">
+            <span class="checked"><i class="fas fa-check-circle"></i></span>
+          </label>
 
-          <div class="menu__plat plat--3">
-            <p class="menu__plat--text"><span>Tarte au citron meringuée</span><br>Déstructurée</p>
-            <p class="menu__plat--prix">23€</p>
-            <span class="fas fa-check-circle menu__plat--checkbox"></span>
-          </div>
+          <label class="menu__plat plat--3">
+            <span class="menu__plat--description">
+              <span class="description__text"><strong>Tarte au citron meringuée</strong><br>Déstructurée</span>
+              <span class="description__prix">23€</span>
+            </span>
+            <input type="checkbox">
+            <span class="checked"><i class="fas fa-check-circle"></i></span>
+          </label>
         </div>
       </div>
       <div class="menu-section--button">
