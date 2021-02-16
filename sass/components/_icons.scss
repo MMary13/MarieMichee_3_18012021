@@ -1,3 +1,4 @@
+/* Icons design */
 .fa-map-marker-alt {
     font-size: 30px;
             padding: 1px;
@@ -25,13 +26,15 @@
     color: $color-secondary;
     z-index: 2;
     opacity: 0;
-    background: -webkit-linear-gradient($color-secondary, $color-primary);
+    background: -webkit-linear-gradient($color-primary,$color-secondary);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    &:hover, :active {
+    transition: opacity 500ms ease-in-out;
+    &:active {
         cursor: pointer;
-        animation: reveal-animation 1s ease-in-out forwards;
+        opacity: 1;
+        //animation: reveal-animation 1s ease-in-out;
     }
 }
 .heart {

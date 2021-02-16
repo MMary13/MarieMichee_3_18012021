@@ -33,11 +33,9 @@
 .menu {
     & .sous-menu {
         padding: 20px 0px 20px 0px;
-        transform-origin: top;
-        @for $i from 0 to 5 {
-            $j: $i+1;
-            $delay: ($j*200ms);
-            :nth-child(#{$i}) {
+        @for $i from 1 to 5 {
+            $delay: ($i*200ms);
+            .plat--#{$i} {
                 transform-origin: top;
                 animation: progress-scaleY 750ms $delay cubic-bezier(.4,.05,.5,.95) both;
             }
@@ -60,8 +58,8 @@
         border-radius: 15px;
         box-shadow: 4px 4px 6px darken($color-background-input,5%);
         transform-origin: top;
-        &:active {
-            animation: reveal-animation 50ms ease-in-out both, progress-scaleX 1s ease-in-out both;
+        &:hover {
+            cursor: pointer;
         }
         &--text {
             font-size: 14px;
@@ -82,12 +80,17 @@
             width: 50px;
             text-align: right;
             align-self: flex-end;
+            &:active + .menu__plat--checkbox {
+                opacity: 1;
+                transform: scaleX(1);
+                > .fa-check-circle {
+                    transform: rotate(360deg);
+                }
+            }
         }
         &--checkbox {
             width: 13%;
             max-width: 80px;
-            transform-origin: right;
-            opacity: 0;
             line-height: 66px;
             text-align: center;
             vertical-align: middle;
@@ -96,10 +99,20 @@
             color: #FFFFFF;
             font-size: 25px;
             background-color: $color-tertiary;
+            opacity: 0;
+            transform-origin: right;
+            transform: scaleX(0.5);
+            transition: opacity 500ms ease-in-out, transform 1s ease-in-out;
+            .fa-check-circle {
+                transform-origin: center center;
+                transform: rotate(0deg);
+                transition: transform 1s ease-in-out;
+            }
             &:active {
-                animation: reveal-animation 50ms ease-in-out both, progress-scaleX 1s ease-in-out both;
-                .fa-check-circle {
-                    animation: spin 50ms ease-in-out both;
+                opacity: 1;
+                transform: scaleX(1);
+                > .fa-check-circle {
+                    transform: rotate(360deg);
                 }
             }
         }
