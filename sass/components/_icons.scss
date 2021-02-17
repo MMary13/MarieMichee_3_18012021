@@ -11,46 +11,36 @@
 }
 
 //Heart checkbox
+
 .heart-checkbox {
     display: flex;
     cursor: pointer;
+    input[type="checkbox"] {
+        display: none;
+    }
     .checked {
         justify-self: flex-start;
+        font-size: 30px;
+        color: $color-secondary;
+        @include text-gradient-color;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        position: absolute;
+    }
+    input[type="checkbox"] ~ .unchecked {
+        font-size: 30px;
+    }
+    input[type="checkbox"]:checked ~ .checked {
+        opacity: 1;
+    }
+    input[type="checkbox"]:checked ~ .unchecked {
+        opacity:0;
     }
 }
 
 .resto-card >.heart-checkbox {
-    z-index: 1;
     position: relative;
+    z-index: 1;
     top: -45px;
     left: 85%;
 }
-
-.heart-checkbox input[type="checkbox"]{
-    display: none;
-}
-
-.heart-checkbox .checked {
-    font-size: 30px;
-    color: $color-secondary;
-    background: linear-gradient($color-primary,$color-secondary);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    position: absolute;
-}
-
-.heart-checkbox input[type="checkbox"] ~ .unchecked {
-    font-size: 30px;
-}
-
-.heart-checkbox input[type="checkbox"]:checked ~ .checked {
-    opacity: 1;
-}
-
-.heart-checkbox input[type="checkbox"]:checked ~ .unchecked {
-    opacity:0;
-}
-

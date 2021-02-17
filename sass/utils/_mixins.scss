@@ -6,3 +6,9 @@
     bottom: 0;
     left: 0;
 }
+
+@mixin text-gradient-color {
+    background: linear-gradient($color-primary,$color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

@@ -53,11 +53,10 @@
     }
     &__plat {
         display: flex;
-        justify-items: flex-start;
         margin-bottom: 15px;
         background-color: #FFFFFF;
         border-radius: 15px;
-        box-shadow: 4px 4px 6px darken($color-background-input,5%);
+        box-shadow: $regular-shadow;
         transform-origin: top;
         &:hover {
             cursor: pointer;
@@ -65,26 +64,22 @@
         &--description {
             display: flex;
             justify-content: space-between;
+            font-size: 16px;
             width: 100%;
             transform-origin: left;
             transition: width 1s ease-in-out;
             .description__text {
                 font-size: 14px;
-                width: 80%;
                 padding: 8px 0px 8px 8px;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 strong {
-                    font-size: 16px;
                     font-weight: 600;
                 }
-                transform-origin: left;
-                transition: width 1s ease-in-out;
             }
             .description__prix {
                 padding: 0px 10px 8px 0px;
-                font-size: 16px;
                 font-weight: bold;
                 width: 50px;
                 text-align: right;
@@ -95,6 +90,8 @@
             display: none;
         }
         .checked {
+            position: relative;
+            right: 0px;
             width: 0%;
             max-width: 80px;
             line-height: 66px;
@@ -115,11 +112,8 @@
             }
         }
         input[type="checkbox"]:checked {
-            .menu__plat--description {
-                width: 80%;
-                .description__text {
-                    width: 50%;
-                }
+            ~ .menu__plat--description {
+                width: 85%;
             }
             ~ .checked {
                 width: 15%;
@@ -146,17 +140,20 @@
     }
 
     .menu-section {
-        & > h3,.menu{
+        & > h3, .sous-menu{
             width: 85%;
             margin: auto;
         }
-        & > .menu {
-            &__plat {
-                width: 80%;
-                margin: auto;
-                margin-top: 15px;
-                margin-bottom: 15px;
-        }
+        .menu__plat {
+            width: 90%;
+            margin: auto;
+            margin-top: 15px;
+            &--description {
+                font-size: 18px;
+                .description__text {
+                    font-size: 16px;   
+                }
+            }   
         }
     }
 }

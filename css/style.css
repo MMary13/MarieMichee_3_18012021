@@ -220,43 +220,35 @@ button::after {
   display: flex;
   cursor: pointer;
 }
-.heart-checkbox .checked {
-  justify-self: flex-start;
-}
-
-.resto-card > .heart-checkbox {
-  z-index: 1;
-  position: relative;
-  top: -45px;
-  left: 85%;
-}
-
 .heart-checkbox input[type=checkbox] {
   display: none;
 }
-
 .heart-checkbox .checked {
+  justify-self: flex-start;
   font-size: 30px;
   color: #FF79DA;
   background: linear-gradient(#9356DC, #FF79DA);
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
   transition: opacity 1s ease-in-out;
   position: absolute;
 }
-
 .heart-checkbox input[type=checkbox] ~ .unchecked {
   font-size: 30px;
 }
-
 .heart-checkbox input[type=checkbox]:checked ~ .checked {
   opacity: 1;
 }
-
 .heart-checkbox input[type=checkbox]:checked ~ .unchecked {
   opacity: 0;
+}
+
+.resto-card > .heart-checkbox {
+  position: relative;
+  z-index: 1;
+  top: -45px;
+  left: 85%;
 }
 
 .loading-spinner {
@@ -265,24 +257,23 @@ button::after {
   background-color: #F6F6F6;
   position: fixed;
   z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   animation: fade-animation 50ms 3s both, translate-z 0ms 3s forwards;
 }
 .loading-spinner span {
+  align-self: center;
   font-size: 36px;
   color: #b7b7b7;
-  position: relative;
-  top: 20%;
   width: 125px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px 0px 20px 0px;
 }
 .loading-spinner--circle {
+  align-self: center;
   height: 200px;
   width: 200px;
-  position: relative;
-  margin: auto;
-  top: 30%;
+  margin: 20px 0px 20px 0px;
   border: dotted 20px #85dcc7;
   border-bottom-color: #EAEAEA;
   border-radius: 50%;
@@ -327,7 +318,12 @@ button::after {
   color: black;
 }
 .header__retour > span {
-  font-size: 20px;
+  font-size: 22px;
+}
+@media only screen and (min-width: 768px) {
+  .header__retour > span {
+    font-size: 30px;
+  }
 }
 
 /* CSS for the Footer */
@@ -610,7 +606,6 @@ button::after {
 }
 .menu__plat {
   display: flex;
-  justify-items: flex-start;
   margin-bottom: 15px;
   background-color: #FFFFFF;
   border-radius: 15px;
@@ -623,27 +618,23 @@ button::after {
 .menu__plat--description {
   display: flex;
   justify-content: space-between;
+  font-size: 16px;
   width: 100%;
   transform-origin: left;
   transition: width 1s ease-in-out;
 }
 .menu__plat--description .description__text {
   font-size: 14px;
-  width: 80%;
   padding: 8px 0px 8px 8px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  transform-origin: left;
-  transition: width 1s ease-in-out;
 }
 .menu__plat--description .description__text strong {
-  font-size: 16px;
   font-weight: 600;
 }
 .menu__plat--description .description__prix {
   padding: 0px 10px 8px 0px;
-  font-size: 16px;
   font-weight: bold;
   width: 50px;
   text-align: right;
@@ -653,6 +644,8 @@ button::after {
   display: none;
 }
 .menu__plat .checked {
+  position: relative;
+  right: 0px;
   width: 0%;
   max-width: 80px;
   line-height: 66px;
@@ -672,11 +665,8 @@ button::after {
   transform-origin: center center;
   transition: transform 1s ease-in-out;
 }
-.menu__plat input[type=checkbox]:checked .menu__plat--description {
-  width: 80%;
-}
-.menu__plat input[type=checkbox]:checked .menu__plat--description .description__text {
-  width: 50%;
+.menu__plat input[type=checkbox]:checked ~ .menu__plat--description {
+  width: 85%;
 }
 .menu__plat input[type=checkbox]:checked ~ .checked {
   width: 15%;
@@ -698,15 +688,20 @@ button::after {
     top: -250px;
   }
 
-  .menu-section > h3, .menu-section .menu {
+  .menu-section > h3, .menu-section .sous-menu {
     width: 85%;
     margin: auto;
   }
-  .menu-section > .menu__plat {
-    width: 80%;
+  .menu-section .menu__plat {
+    width: 90%;
     margin: auto;
     margin-top: 15px;
-    margin-bottom: 15px;
+  }
+  .menu-section .menu__plat--description {
+    font-size: 18px;
+  }
+  .menu-section .menu__plat--description .description__text {
+    font-size: 16px;
   }
 }
 @media only screen and (min-width: 991px) {
