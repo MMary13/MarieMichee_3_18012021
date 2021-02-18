@@ -1,3 +1,4 @@
+/* Loader CSS */
 .loading-spinner {
     width: 100%;
     height: 100%;
@@ -25,8 +26,8 @@
         animation: spinner 1s cubic-bezier(.3,.75,.5,1) 3 both , color-progress 2s ease-in-out 2 both;
         -moz-animation: spinner 1s cubic-bezier(.3,.75,.5,1) 3 both , color-progress 2s ease-in-out 2 both;
     }
-    animation: fade-animation 50ms 3s both, translate-z 0ms 3s forwards;
-    -moz-animation: fade-animation 50ms 3s both, translate-z 0ms 3s forwards;
+    animation: fadeIn 50ms 3s both, translate-z 0ms 3s forwards;
+    -moz-animation: fadeIn 50ms 3s both, translate-z 0ms 3s forwards;
 }
 .page_content {
     z-index: 1;

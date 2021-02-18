@@ -1,3 +1,4 @@
+/* Keyframes used for animations */
 @keyframes spinner {
     0% {
       transform:  rotate(0deg);
@@ -25,16 +26,7 @@
     }
 }
 
-@keyframes reveal-animation {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fade-animation {
+@keyframes fadeIn {
     from {
         opacity: 1;
     }
@@ -51,16 +43,6 @@
         z-index: -1;
     }
 }
-
-@keyframes progress-scaleX {
-    0% {
-        transform: scaleX(0);
-    }
-    100% {
-        transform: scaleX(1);
-    }
-}
-
 
 @keyframes progress-scaleY {
     0% {
