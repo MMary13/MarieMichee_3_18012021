@@ -162,7 +162,8 @@ strong {
   }
 
   h3 {
-    font-size: 32px;
+    font-size: 36px;
+    padding: 0px 20px 30px 0px;
   }
 
   h4 {
@@ -202,6 +203,12 @@ button::after {
   opacity: 0;
   z-index: -1;
   transition: all 250ms;
+  -moz-transition: all 250ms;
+}
+@media only screen and (min-width: 991px) {
+  button {
+    font-size: 24px;
+  }
 }
 
 /* Icons design */
@@ -217,6 +224,7 @@ button::after {
 }
 
 .heart-checkbox {
+  width: fit-content;
   display: flex;
   cursor: pointer;
 }
@@ -232,6 +240,7 @@ button::after {
   -webkit-text-fill-color: transparent;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
   position: absolute;
 }
 .heart-checkbox input[type=checkbox] ~ .unchecked {
@@ -257,31 +266,32 @@ button::after {
   background-color: #F6F6F6;
   position: fixed;
   z-index: 3;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   animation: fade-animation 50ms 3s both, translate-z 0ms 3s forwards;
+  -moz-animation: fade-animation 50ms 3s both, translate-z 0ms 3s forwards;
 }
 .loading-spinner span {
-  align-self: center;
+  display: block;
+  position: relative;
+  top: 20%;
   font-size: 36px;
   color: #b7b7b7;
   width: 125px;
-  margin: 20px 0px 20px 0px;
+  margin: 20px auto 20px auto;
 }
 .loading-spinner--circle {
-  align-self: center;
+  position: relative;
+  top: 30%;
   height: 200px;
   width: 200px;
-  margin: 20px 0px 20px 0px;
+  margin: 20px auto 20px auto;
   border: dotted 20px #85dcc7;
   border-bottom-color: #EAEAEA;
   border-radius: 50%;
   animation: spinner 1s cubic-bezier(0.3, 0.75, 0.5, 1) 3 both, color-progress 2s ease-in-out 2 both;
+  -moz-animation: spinner 1s cubic-bezier(0.3, 0.75, 0.5, 1) 3 both, color-progress 2s ease-in-out 2 both;
 }
 
 .page_content {
-  position: relative;
   z-index: 1;
 }
 
@@ -309,6 +319,7 @@ button::after {
 @media only screen and (min-width: 991px) {
   .header__logo {
     width: 25%;
+    margin-bottom: 15px;
   }
 }
 .header__retour {
@@ -362,7 +373,7 @@ button::after {
 }
 @media only screen and (min-width: 991px) {
   .footer {
-    padding: 50px;
+    padding: 60px;
   }
   .footer > div {
     width: 70%;
@@ -559,7 +570,7 @@ button::after {
 }
 
 .menu-section {
-  padding: 40px 15px 30px 15px;
+  padding: 40px 15px 40px 15px;
   background-color: #F6F6F6;
   border-radius: 50px 50px 0px 0px;
   position: relative;
@@ -575,24 +586,31 @@ button::after {
   justify-content: center;
 }
 
+.menu {
+  padding-bottom: 30px;
+}
 .menu .sous-menu {
   padding: 20px 0px 20px 0px;
 }
 .menu .sous-menu .plat--1 {
   transform-origin: top;
   animation: progress-scaleY 750ms 200ms cubic-bezier(0.4, 0.05, 0.5, 0.95) both;
+  -moz-animation: progress-scaleY 750ms 200ms cubic-bezier(0.4, 0.05, 0.5, 0.95) both;
 }
 .menu .sous-menu .plat--2 {
   transform-origin: top;
   animation: progress-scaleY 750ms 400ms cubic-bezier(0.4, 0.05, 0.5, 0.95) both;
+  -moz-animation: progress-scaleY 750ms 400ms cubic-bezier(0.4, 0.05, 0.5, 0.95) both;
 }
 .menu .sous-menu .plat--3 {
   transform-origin: top;
   animation: progress-scaleY 750ms 600ms cubic-bezier(0.4, 0.05, 0.5, 0.95) both;
+  -moz-animation: progress-scaleY 750ms 600ms cubic-bezier(0.4, 0.05, 0.5, 0.95) both;
 }
 .menu .sous-menu .plat--4 {
   transform-origin: top;
   animation: progress-scaleY 750ms 800ms cubic-bezier(0.4, 0.05, 0.5, 0.95) both;
+  -moz-animation: progress-scaleY 750ms 800ms cubic-bezier(0.4, 0.05, 0.5, 0.95) both;
 }
 .menu h4 {
   display: flex;
@@ -606,6 +624,7 @@ button::after {
 }
 .menu__plat {
   display: flex;
+  overflow: hidden;
   margin-bottom: 15px;
   background-color: #FFFFFF;
   border-radius: 15px;
@@ -622,6 +641,7 @@ button::after {
   width: 100%;
   transform-origin: left;
   transition: width 1s ease-in-out;
+  -moz-transition: width 1s ease-in-out;
 }
 .menu__plat--description .description__text {
   font-size: 14px;
@@ -644,10 +664,7 @@ button::after {
   display: none;
 }
 .menu__plat .checked {
-  position: relative;
-  right: 0px;
   width: 0%;
-  max-width: 80px;
   line-height: 66px;
   text-align: center;
   vertical-align: middle;
@@ -659,11 +676,13 @@ button::after {
   opacity: 0;
   transform-origin: right;
   transition: width 1s ease-in-out, opacity 0ms 320ms;
+  -moz-transition: width 1s ease-in-out, opacity 0ms 320ms;
 }
 .menu__plat .checked .fa-check-circle {
   transform: rotate(0deg);
   transform-origin: center center;
   transition: transform 1s ease-in-out;
+  -moz-transition: transform 1s ease-in-out;
 }
 .menu__plat input[type=checkbox]:checked ~ .menu__plat--description {
   width: 85%;
@@ -717,21 +736,30 @@ button::after {
   }
 
   .menu-section {
-    padding: 40px 5% 30px 5%;
+    padding: 40px 0px 100px 0px;
   }
   .menu-section h3 {
     justify-content: flex-start;
+    padding-left: 3%;
+    padding-right: 3%;
   }
   .menu-section h3 span {
-    margin: 0px 20px 0px 20px;
+    margin: 0px 40px 0px 40px;
   }
 
   .menu {
     display: flex;
     justify-content: space-between;
+    padding: 30px 5% 40px 5%;
   }
   .menu .sous-menu {
     width: 32%;
+  }
+  .menu .sous-menu h4 {
+    margin-bottom: 20px;
+  }
+  .menu .menu__plat {
+    margin: 5% auto 6% auto;
   }
 }
 

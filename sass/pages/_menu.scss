@@ -14,7 +14,7 @@
 }
 
 .menu-section {
-    padding: 40px 15px 30px 15px;
+    padding: 40px 15px 40px 15px;
     background-color: $color-background-light;
     border-radius: 50px 50px 0px 0px;
     position: relative;
@@ -31,6 +31,7 @@
 }
 
 .menu {
+    padding-bottom: 30px;
     & .sous-menu {
         padding: 20px 0px 20px 0px;
         @for $i from 1 to 5 {
@@ -38,6 +39,7 @@
             .plat--#{$i} {
                 transform-origin: top;
                 animation: progress-scaleY 750ms $delay cubic-bezier(.4,.05,.5,.95) both;
+                -moz-animation: progress-scaleY 750ms $delay cubic-bezier(.4,.05,.5,.95) both;
             }
         }
     }
@@ -53,6 +55,7 @@
     }
     &__plat {
         display: flex;
+        overflow: hidden;
         margin-bottom: 15px;
         background-color: #FFFFFF;
         border-radius: 15px;
@@ -68,6 +71,7 @@
             width: 100%;
             transform-origin: left;
             transition: width 1s ease-in-out;
+            -moz-transition: width 1s ease-in-out;
             .description__text {
                 font-size: 14px;
                 padding: 8px 0px 8px 8px;
@@ -90,10 +94,7 @@
             display: none;
         }
         .checked {
-            position: relative;
-            right: 0px;
             width: 0%;
-            max-width: 80px;
             line-height: 66px;
             text-align: center;
             vertical-align: middle;
@@ -105,10 +106,12 @@
             opacity: 0;
             transform-origin: right;
             transition: width 1s ease-in-out, opacity 0ms 320ms;
+            -moz-transition: width 1s ease-in-out, opacity 0ms 320ms;
             .fa-check-circle {
                 transform: rotate(0deg);
                 transform-origin: center center;
                 transition: transform 1s ease-in-out;
+                -moz-transition: transform 1s ease-in-out;
             }
         }
         input[type="checkbox"]:checked {
@@ -171,19 +174,28 @@
     }
 
     .menu-section {
-        padding: 40px 5% 30px 5%;
+        padding: 40px 0px 100px 0px;
         h3 {
             justify-content: flex-start;
+            padding-left: 3%;
+            padding-right: 3%;
             span {
-                margin: 0px 20px 0px 20px;
+                margin: 0px 40px 0px 40px;
             }
         } 
     }
     .menu {
         display: flex;
         justify-content: space-between;
+        padding: 30px 5% 40px 5%;
         .sous-menu {
+            h4 {
+                margin-bottom: 20px;
+            }
             width: 32%;
+        }
+        .menu__plat {
+            margin: 5% auto 6% auto;
         }
     }
 }

@@ -25,5 +25,9 @@ button {
         opacity: 0;
         z-index: -1;
         transition: all 250ms;
+        -moz-transition: all 250ms;
+    }
+    @media only screen and (min-width: 991px) {
+        font-size: 24px;
     }
 }
