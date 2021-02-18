@@ -11,6 +11,15 @@ $color-background-light:#F6F6F6;
 $color-background-dark: #353535;
 
 // -- Fonts -- //
+@font-face {
+    font-family: 'shrikhandregular';
+    src: url('../../fonts/Shrikhand-Regular.otf') format('truetype'),
+         url('../../fonts/shrikhand-regular-webfont.woff2') format('woff2'),
+         url('../../fonts/shrikhand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 $title-font: 'shrikhandregular';
 $text-font: 'Roboto';
 
