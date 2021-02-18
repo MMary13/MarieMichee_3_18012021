@@ -15,3 +15,5 @@ $title-font: 'shrikhandregular';
 $text-font: 'Roboto';
 
 // -- Others -- //
+$regular-shadow: 4px 4px 6px darken($color-background-input,5%);
+$bolder-shadow: 8px 8px 4px darken($color-background-input,5%);

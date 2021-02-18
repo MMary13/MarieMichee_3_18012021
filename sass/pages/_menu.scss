@@ -14,7 +14,7 @@
 }
 
 .menu-section {
-    padding: 40px 15px 30px 15px;
+    padding: 40px 15px 40px 15px;
     background-color: $color-background-light;
     border-radius: 50px 50px 0px 0px;
     position: relative;
@@ -31,6 +31,7 @@
 }
 
 .menu {
+    padding-bottom: 30px;
     & .sous-menu {
         padding: 20px 0px 20px 0px;
         @for $i from 1 to 5 {
@@ -38,6 +39,7 @@
             .plat--#{$i} {
                 transform-origin: top;
                 animation: progress-scaleY 750ms $delay cubic-bezier(.4,.05,.5,.95) both;
+                -moz-animation: progress-scaleY 750ms $delay cubic-bezier(.4,.05,.5,.95) both;
             }
         }
     }
@@ -53,11 +55,11 @@
     }
     &__plat {
         display: flex;
-        justify-items: flex-start;
+        overflow: hidden;
         margin-bottom: 15px;
         background-color: #FFFFFF;
         border-radius: 15px;
-        box-shadow: 4px 4px 6px darken($color-background-input,5%);
+        box-shadow: $regular-shadow;
         transform-origin: top;
         &:hover {
             cursor: pointer;
@@ -65,26 +67,23 @@
         &--description {
             display: flex;
             justify-content: space-between;
+            font-size: 16px;
             width: 100%;
             transform-origin: left;
             transition: width 1s ease-in-out;
+            -moz-transition: width 1s ease-in-out;
             .description__text {
                 font-size: 14px;
-                width: 80%;
                 padding: 8px 0px 8px 8px;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 strong {
-                    font-size: 16px;
                     font-weight: 600;
                 }
-                transform-origin: left;
-                transition: width 1s ease-in-out;
             }
             .description__prix {
                 padding: 0px 10px 8px 0px;
-                font-size: 16px;
                 font-weight: bold;
                 width: 50px;
                 text-align: right;
@@ -96,7 +95,6 @@
         }
         .checked {
             width: 0%;
-            max-width: 80px;
             line-height: 66px;
             text-align: center;
             vertical-align: middle;
@@ -108,18 +106,17 @@
             opacity: 0;
             transform-origin: right;
             transition: width 1s ease-in-out, opacity 0ms 320ms;
+            -moz-transition: width 1s ease-in-out, opacity 0ms 320ms;
             .fa-check-circle {
                 transform: rotate(0deg);
                 transform-origin: center center;
                 transition: transform 1s ease-in-out;
+                -moz-transition: transform 1s ease-in-out;
             }
         }
         input[type="checkbox"]:checked {
-            .menu__plat--description {
-                width: 80%;
-                .description__text {
-                    width: 50%;
-                }
+            ~ .menu__plat--description {
+                width: 85%;
             }
             ~ .checked {
                 width: 15%;
@@ -146,17 +143,20 @@
     }
 
     .menu-section {
-        & > h3,.menu{
+        & > h3, .sous-menu{
             width: 85%;
             margin: auto;
         }
-        & > .menu {
-            &__plat {
-                width: 80%;
-                margin: auto;
-                margin-top: 15px;
-                margin-bottom: 15px;
-        }
+        .menu__plat {
+            width: 90%;
+            margin: auto;
+            margin-top: 15px;
+            &--description {
+                font-size: 18px;
+                .description__text {
+                    font-size: 16px;   
+                }
+            }   
         }
     }
 }
@@ -174,19 +174,28 @@
     }
 
     .menu-section {
-        padding: 40px 5% 30px 5%;
+        padding: 40px 0px 100px 0px;
         h3 {
             justify-content: flex-start;
+            padding-left: 3%;
+            padding-right: 3%;
             span {
-                margin: 0px 20px 0px 20px;
+                margin: 0px 40px 0px 40px;
             }
         } 
     }
     .menu {
         display: flex;
         justify-content: space-between;
+        padding: 30px 5% 40px 5%;
         .sous-menu {
+            h4 {
+                margin-bottom: 20px;
+            }
             width: 32%;
+        }
+        .menu__plat {
+            margin: 5% auto 6% auto;
         }
     }
 }

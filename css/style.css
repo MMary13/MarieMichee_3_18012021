@@ -162,7 +162,8 @@ strong {
   }
 
   h3 {
-    font-size: 32px;
+    font-size: 36px;
+    padding: 0px 20px 30px 0px;
   }
 
   h4 {
@@ -202,6 +203,12 @@ button::after {
   opacity: 0;
   z-index: -1;
   transition: all 250ms;
+  -moz-transition: all 250ms;
+}
+@media only screen and (min-width: 991px) {
+  button {
+    font-size: 24px;
+  }
 }
 
 /* Icons design */
@@ -217,46 +224,40 @@ button::after {
 }
 
 .heart-checkbox {
+  width: fit-content;
   display: flex;
   cursor: pointer;
 }
-.heart-checkbox .checked {
-  justify-self: flex-start;
-}
-
-.resto-card > .heart-checkbox {
-  z-index: 1;
-  position: relative;
-  top: -45px;
-  left: 85%;
-}
-
 .heart-checkbox input[type=checkbox] {
   display: none;
 }
-
 .heart-checkbox .checked {
+  justify-self: flex-start;
   font-size: 30px;
   color: #FF79DA;
   background: linear-gradient(#9356DC, #FF79DA);
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
   position: absolute;
 }
-
 .heart-checkbox input[type=checkbox] ~ .unchecked {
   font-size: 30px;
 }
-
 .heart-checkbox input[type=checkbox]:checked ~ .checked {
   opacity: 1;
 }
-
 .heart-checkbox input[type=checkbox]:checked ~ .unchecked {
   opacity: 0;
+}
+
+.resto-card > .heart-checkbox {
+  position: relative;
+  z-index: 1;
+  top: -45px;
+  left: 85%;
 }
 
 .loading-spinner {
@@ -266,31 +267,31 @@ button::after {
   position: fixed;
   z-index: 3;
   animation: fade-animation 50ms 3s both, translate-z 0ms 3s forwards;
+  -moz-animation: fade-animation 50ms 3s both, translate-z 0ms 3s forwards;
 }
 .loading-spinner span {
-  font-size: 36px;
-  color: #b7b7b7;
+  display: block;
   position: relative;
   top: 20%;
+  font-size: 36px;
+  color: #b7b7b7;
   width: 125px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px auto 20px auto;
 }
 .loading-spinner--circle {
+  position: relative;
+  top: 30%;
   height: 200px;
   width: 200px;
-  position: relative;
-  margin: auto;
-  top: 30%;
+  margin: 20px auto 20px auto;
   border: dotted 20px #85dcc7;
   border-bottom-color: #EAEAEA;
   border-radius: 50%;
   animation: spinner 1s cubic-bezier(0.3, 0.75, 0.5, 1) 3 both, color-progress 2s ease-in-out 2 both;
+  -moz-animation: spinner 1s cubic-bezier(0.3, 0.75, 0.5, 1) 3 both, color-progress 2s ease-in-out 2 both;
 }
 
 .page_content {
-  position: relative;
   z-index: 1;
 }
 
@@ -318,6 +319,7 @@ button::after {
 @media only screen and (min-width: 991px) {
   .header__logo {
     width: 25%;
+    margin-bottom: 15px;
   }
 }
 .header__retour {
@@ -327,7 +329,12 @@ button::after {
   color: black;
 }
 .header__retour > span {
-  font-size: 20px;
+  font-size: 22px;
+}
+@media only screen and (min-width: 768px) {
+  .header__retour > span {
+    font-size: 30px;
+  }
 }
 
 /* CSS for the Footer */
@@ -366,7 +373,7 @@ button::after {
 }
 @media only screen and (min-width: 991px) {
   .footer {
-    padding: 50px;
+    padding: 60px;
   }
   .footer > div {
     width: 70%;
@@ -563,7 +570,7 @@ button::after {
 }
 
 .menu-section {
-  padding: 40px 15px 30px 15px;
+  padding: 40px 15px 40px 15px;
   background-color: #F6F6F6;
   border-radius: 50px 50px 0px 0px;
   position: relative;
@@ -579,24 +586,31 @@ button::after {
   justify-content: center;
 }
 
+.menu {
+  padding-bottom: 30px;
+}
 .menu .sous-menu {
   padding: 20px 0px 20px 0px;
 }
 .menu .sous-menu .plat--1 {
   transform-origin: top;
   animation: progress-scaleY 750ms 200ms cubic-bezier(0.4, 0.05, 0.5, 0.95) both;
+  -moz-animation: progress-scaleY 750ms 200ms cubic-bezier(0.4, 0.05, 0.5, 0.95) both;
 }
 .menu .sous-menu .plat--2 {
   transform-origin: top;
   animation: progress-scaleY 750ms 400ms cubic-bezier(0.4, 0.05, 0.5, 0.95) both;
+  -moz-animation: progress-scaleY 750ms 400ms cubic-bezier(0.4, 0.05, 0.5, 0.95) both;
 }
 .menu .sous-menu .plat--3 {
   transform-origin: top;
   animation: progress-scaleY 750ms 600ms cubic-bezier(0.4, 0.05, 0.5, 0.95) both;
+  -moz-animation: progress-scaleY 750ms 600ms cubic-bezier(0.4, 0.05, 0.5, 0.95) both;
 }
 .menu .sous-menu .plat--4 {
   transform-origin: top;
   animation: progress-scaleY 750ms 800ms cubic-bezier(0.4, 0.05, 0.5, 0.95) both;
+  -moz-animation: progress-scaleY 750ms 800ms cubic-bezier(0.4, 0.05, 0.5, 0.95) both;
 }
 .menu h4 {
   display: flex;
@@ -610,7 +624,7 @@ button::after {
 }
 .menu__plat {
   display: flex;
-  justify-items: flex-start;
+  overflow: hidden;
   margin-bottom: 15px;
   background-color: #FFFFFF;
   border-radius: 15px;
@@ -623,27 +637,24 @@ button::after {
 .menu__plat--description {
   display: flex;
   justify-content: space-between;
+  font-size: 16px;
   width: 100%;
   transform-origin: left;
   transition: width 1s ease-in-out;
+  -moz-transition: width 1s ease-in-out;
 }
 .menu__plat--description .description__text {
   font-size: 14px;
-  width: 80%;
   padding: 8px 0px 8px 8px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  transform-origin: left;
-  transition: width 1s ease-in-out;
 }
 .menu__plat--description .description__text strong {
-  font-size: 16px;
   font-weight: 600;
 }
 .menu__plat--description .description__prix {
   padding: 0px 10px 8px 0px;
-  font-size: 16px;
   font-weight: bold;
   width: 50px;
   text-align: right;
@@ -654,7 +665,6 @@ button::after {
 }
 .menu__plat .checked {
   width: 0%;
-  max-width: 80px;
   line-height: 66px;
   text-align: center;
   vertical-align: middle;
@@ -666,17 +676,16 @@ button::after {
   opacity: 0;
   transform-origin: right;
   transition: width 1s ease-in-out, opacity 0ms 320ms;
+  -moz-transition: width 1s ease-in-out, opacity 0ms 320ms;
 }
 .menu__plat .checked .fa-check-circle {
   transform: rotate(0deg);
   transform-origin: center center;
   transition: transform 1s ease-in-out;
+  -moz-transition: transform 1s ease-in-out;
 }
-.menu__plat input[type=checkbox]:checked .menu__plat--description {
-  width: 80%;
-}
-.menu__plat input[type=checkbox]:checked .menu__plat--description .description__text {
-  width: 50%;
+.menu__plat input[type=checkbox]:checked ~ .menu__plat--description {
+  width: 85%;
 }
 .menu__plat input[type=checkbox]:checked ~ .checked {
   width: 15%;
@@ -698,15 +707,20 @@ button::after {
     top: -250px;
   }
 
-  .menu-section > h3, .menu-section .menu {
+  .menu-section > h3, .menu-section .sous-menu {
     width: 85%;
     margin: auto;
   }
-  .menu-section > .menu__plat {
-    width: 80%;
+  .menu-section .menu__plat {
+    width: 90%;
     margin: auto;
     margin-top: 15px;
-    margin-bottom: 15px;
+  }
+  .menu-section .menu__plat--description {
+    font-size: 18px;
+  }
+  .menu-section .menu__plat--description .description__text {
+    font-size: 16px;
   }
 }
 @media only screen and (min-width: 991px) {
@@ -722,21 +736,30 @@ button::after {
   }
 
   .menu-section {
-    padding: 40px 5% 30px 5%;
+    padding: 40px 0px 100px 0px;
   }
   .menu-section h3 {
     justify-content: flex-start;
+    padding-left: 3%;
+    padding-right: 3%;
   }
   .menu-section h3 span {
-    margin: 0px 20px 0px 20px;
+    margin: 0px 40px 0px 40px;
   }
 
   .menu {
     display: flex;
     justify-content: space-between;
+    padding: 30px 5% 40px 5%;
   }
   .menu .sous-menu {
     width: 32%;
+  }
+  .menu .sous-menu h4 {
+    margin-bottom: 20px;
+  }
+  .menu .menu__plat {
+    margin: 5% auto 6% auto;
   }
 }
 
