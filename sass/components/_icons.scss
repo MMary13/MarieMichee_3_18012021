@@ -25,7 +25,6 @@
         @include text-gradient-color;
         opacity: 0;
         transition: opacity 1s ease-in-out;
-        -moz-transition: opacity 1s ease-in-out;
         position: absolute;
     }
     input[type="checkbox"] ~ .unchecked {

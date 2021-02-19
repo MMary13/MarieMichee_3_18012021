@@ -39,7 +39,6 @@
             .plat--#{$i} {
                 transform-origin: top;
                 animation: progress-scaleY 750ms $delay cubic-bezier(.4,.05,.5,.95) both;
-                -moz-animation: progress-scaleY 750ms $delay cubic-bezier(.4,.05,.5,.95) both;
             }
         }
     }
@@ -71,7 +70,6 @@
             width: 100%;
             transform-origin: left;
             transition: width 1s ease-in-out;
-            -moz-transition: width 1s ease-in-out;
             .description__text {
                 font-size: 14px;
                 padding: 8px 0px 8px 8px;
@@ -106,12 +104,10 @@
             opacity: 0;
             transform-origin: right;
             transition: width 1s ease-in-out, opacity 0ms 320ms;
-            -moz-transition: width 1s ease-in-out, opacity 0ms 320ms;
             .fa-check-circle {
                 transform: rotate(0deg);
                 transform-origin: center center;
                 transition: transform 1s ease-in-out;
-                -moz-transition: transform 1s ease-in-out;
             }
         }
         input[type="checkbox"]:checked {
