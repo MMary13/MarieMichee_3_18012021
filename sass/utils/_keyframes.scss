@@ -53,3 +53,30 @@
     }
 }
 
+@keyframes heart-filling {
+    0% {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+    20% {
+        opacity: 1;
+        transform: scaleY(0.2);
+    }
+    40% {
+        opacity: 1;
+        transform: scaleY(0.4);
+    }
+    60% {
+        opacity: 1;
+        transform: scaleY(0.6);
+    }
+    80% {
+        opacity: 1;
+        transform: scaleY(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+

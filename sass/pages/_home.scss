@@ -42,6 +42,9 @@
         position: relative;
         z-index: 1;
         &:hover {
+            .step__icon {
+                color: $color-primary;
+            }
             cursor: pointer;
             &::after {
                 opacity: 1;
