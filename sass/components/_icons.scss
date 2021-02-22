@@ -1,6 +1,6 @@
 /* Icons CSS */
 .fa-map-marker-alt {
-    font-size: 30px;
+    font-size: 22px;
     padding: 1px;
 }
 
@@ -20,18 +20,22 @@
     }
     .checked {
         justify-self: flex-start;
+        position: absolute;
         font-size: 30px;
         color: $color-secondary;
         @include text-gradient-color;
+        transform-origin: bottom;
+        transform: scaleY(0);
         opacity: 0;
-        transition: opacity 1s ease-in-out;
-        position: absolute;
+        transition: opacity 50ms ease-in-out, transform 1s ease-in-out;
+        
     }
     input[type="checkbox"] ~ .unchecked {
         font-size: 30px;
     }
     input[type="checkbox"]:checked ~ .checked {
         opacity: 1;
+        transform: scaleY(1);
     }
     input[type="checkbox"]:checked ~ .unchecked {
         opacity:0;

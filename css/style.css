@@ -56,6 +56,32 @@
     transform: scaleY(1);
   }
 }
+@keyframes heart-filling {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  20% {
+    opacity: 1;
+    transform: scaleY(0.2);
+  }
+  40% {
+    opacity: 1;
+    transform: scaleY(0.4);
+  }
+  60% {
+    opacity: 1;
+    transform: scaleY(0.6);
+  }
+  80% {
+    opacity: 1;
+    transform: scaleY(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
 /* Global CSS */
 *,
 *::after,
@@ -198,7 +224,7 @@ button::after {
 
 /* Icons CSS */
 .fa-map-marker-alt {
-  font-size: 30px;
+  font-size: 22px;
   padding: 1px;
 }
 
@@ -218,20 +244,23 @@ button::after {
 }
 .heart-checkbox .checked {
   justify-self: flex-start;
+  position: absolute;
   font-size: 30px;
   color: #FF79DA;
   background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transform-origin: bottom;
+  transform: scaleY(0);
   opacity: 0;
-  transition: opacity 1s ease-in-out;
-  position: absolute;
+  transition: opacity 50ms ease-in-out, transform 1s ease-in-out;
 }
 .heart-checkbox input[type=checkbox] ~ .unchecked {
   font-size: 30px;
 }
 .heart-checkbox input[type=checkbox]:checked ~ .checked {
   opacity: 1;
+  transform: scaleY(1);
 }
 .heart-checkbox input[type=checkbox]:checked ~ .unchecked {
   opacity: 0;
@@ -412,6 +441,9 @@ button::after {
 }
 .fonctionnement__step:hover {
   cursor: pointer;
+}
+.fonctionnement__step:hover .step__icon {
+  color: #9356DC;
 }
 .fonctionnement__step:hover::after {
   opacity: 1;
@@ -674,7 +706,7 @@ button::after {
   transform: rotate(360deg);
 }
 
-@media only screen and (min-width: 768px) and (max-width: 990px) {
+@media only screen and (min-width: 780px) and (max-width: 990px) {
   .menu-image--container {
     height: 300px;
   }
